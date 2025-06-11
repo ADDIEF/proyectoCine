@@ -1,0 +1,18 @@
+# Ignorar el entorno virtual
+venv/
+.env
+
+# Ignorar los archivos compilados
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar la base de datos SQLite (si es que usas SQLite en algún momento)
+*.db
+
+# Ignorar archivos de migraciones de Alembic
+alembic/versions/
+
+# Ignorar archivos generados por el sistema operativo
+.DS_Store  # Para macOS
+Thumbs.db  # Para Windows
