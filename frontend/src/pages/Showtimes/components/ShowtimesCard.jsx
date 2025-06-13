@@ -105,7 +105,7 @@ export const ShowtimesCard = (props) => {
           className="showtimes-details-btn"
           onClick={() => navigate(`/movieDetails/${props.id}`)}
         >
-          See details
+          Ver Detalles
         </button>
       </div>
 

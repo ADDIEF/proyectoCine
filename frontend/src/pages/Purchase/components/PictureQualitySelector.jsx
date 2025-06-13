@@ -130,7 +130,7 @@ export const PictureQualitySelector = ({
   return (
     <div>
       <form>
-        <div className="form-item-heading">Select Quality</div>
+        <div className="form-item-heading">Seleccione Calidad</div>
         {loading && <HashLoader cssOverride={override} color="#eb3656" />}
         {!loading && (
           <div className="form-hall-container">{showtimeOptions}</div>
