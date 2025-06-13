@@ -175,7 +175,7 @@ export const AdminMovieAddSection = () => {
               name="movieName"
               onChange={(e) => handleMovieInfo(e)}
               type="text"
-              placeholder="Enter Movie Name"
+              placeholder="Ingrese el nombre..."
             />
           </div>
 
@@ -185,17 +185,17 @@ export const AdminMovieAddSection = () => {
               name="imagePath"
               onChange={(e) => handleMovieInfo(e)}
               type="text"
-              placeholder="Enter Image path"
+              placeholder="Ingresar ruta de la imagen"
             />
           </div>
 
           <div>
-            <p>Lenguaje:</p>
+            <p>Idioma:</p>
             <input
               name="language"
               onChange={(e) => handleMovieInfo(e)}
               type="text"
-              placeholder="Enter Movie Language"
+              placeholder="Ingrese idioma..."
             />
           </div>
 
@@ -204,7 +204,7 @@ export const AdminMovieAddSection = () => {
             <input
               name="description"
               onChange={(e) => handleMovieInfo(e)}
-              placeholder="Enter Movie's Brief Description"
+              placeholder="Breve descripción..."
             />
           </div>
 
@@ -214,7 +214,7 @@ export const AdminMovieAddSection = () => {
               name="rating"
               onChange={(e) => handleMovieInfo(e)}
               type="text"
-              placeholder="Enter Movie Rating"
+              placeholder="Ingrese la clasificacion"
             />
           </div>
 
@@ -224,7 +224,7 @@ export const AdminMovieAddSection = () => {
               name="duration"
               onChange={(e) => handleMovieInfo(e)}
               type="text"
-              placeholder="Enter Movie Duration"
+              placeholder="Ingrese la duración..."
             />
           </div>
 
@@ -234,7 +234,7 @@ export const AdminMovieAddSection = () => {
               name="cast"
               onChange={(e) => handleMovieInfo(e)}
               type="text"
-              placeholder="Enter Movie's Main Actor/Actress Name"
+              placeholder="Nombre del actor/actriz principal"
             />
           </div>
 
@@ -244,27 +244,27 @@ export const AdminMovieAddSection = () => {
               name="relDate"
               onChange={(e) => handleMovieInfo(e)}
               type="text"
-              placeholder="(yyyy-mm-dd) format"
+              placeholder="(aaaa-mm-dd)"
             />
           </div>
 
           <div>
-            <p>Movie Genres:</p>
+            <p>Géneros de la Pelicula:</p>
             <input
               name="genres"
               onChange={(e) => handleMovieInfo(e)}
               type="text"
-              placeholder="Enter separate Genres with comma"
+              placeholder="Ingreselos separados por una coma"
             />
           </div>
 
           <div>
-            <p>Movie Directors:</p>
+            <p>Directores de la pelicula:</p>
             <input
               name="directors"
               onChange={(e) => handleMovieInfo(e)}
               type="text"
-              placeholder="Enter separate Directors with comma"
+              placeholder="Ingreselos separados por una coma"
             />
           </div>
 
