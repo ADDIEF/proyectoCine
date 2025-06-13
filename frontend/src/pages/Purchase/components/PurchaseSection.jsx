@@ -470,7 +470,7 @@ export const PurchaseSection = () => {
               onClick={handleTicketPurchase}
               disabled={btnDisabled}
             >
-              {loading ? <BarLoader color="#e6e6e8" /> : "purchase ticket"}
+              {loading ? <BarLoader color="#e6e6e8" /> : "Comprar Ticket"}
             </button>
           </div>
         </div>

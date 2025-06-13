@@ -15,8 +15,31 @@ export const PayMethodSelector = ({ paymentOngoing }) => {
   return (
     <div>
       <form>
-        <div className="form-item-heading">Selecciona un Método de Pago</div>
+
+        <div className="form-item-heading">Seleccion Metodo de Pago</div>
         <div className="form-pay-options">
+          
+
+          <div
+            className="pay-input-container"
+            key="Nagad"
+            style={checkedColor("Nagad")}
+          >
+            <input
+              disabled={paymentOngoing}
+              type="radio"
+              id={2}
+              name="Select Payment"
+              value="Nagad"
+              onChange={(e) => dispatch(setPaymentMethod(e.target.value))}
+              checked={"Nagad" === userPayMethod}
+            />
+
+            <label className="form-pay-detail" htmlFor={2}>
+              QR
+            </label>
+          </div>
+
           <div
             className="pay-input-container"
             key="Credit Card"
@@ -32,8 +55,9 @@ export const PayMethodSelector = ({ paymentOngoing }) => {
               checked={"Credit Card" === userPayMethod}
             />
 
-            <label className="form-pay-detail" htmlFor={1}>
-              Tarjeta de Crédito
+
+            <label className="form-pay-detail" htmlFor={3}>
+              Tarjeta de Credito
             </label>
           </div>
 
@@ -51,9 +75,8 @@ export const PayMethodSelector = ({ paymentOngoing }) => {
               onChange={(e) => dispatch(setPaymentMethod(e.target.value))}
               checked={"Debit Card" === userPayMethod}
             />
-
-            <label className="form-pay-detail" htmlFor={2}>
-              Tarjeta de Débito
+            <label className="form-pay-detail" htmlFor={4}>
+              Tarjeta de Debito
             </label>
           </div>
         </div>

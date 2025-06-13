@@ -109,8 +109,8 @@ export const CustomerInfoSection = () => {
 
         <div className="purchase-price-create">
           <div className="purchase-tags">
-            <HiOutlineCurrencyDollar size={18} />
-            <strong>${purchase.ticket_price}</strong>
+
+            <strong>${purchase.ticket_price} Bs</strong>
           </div>
           <div className="purchase-tags">
             <p>
