@@ -38,20 +38,26 @@ export const MovieInfoSection = () => {
           }
         );
 
-        const formattedRelDate = new Date(
-          movieDetailResponse.data[0].release_date
-        ).toLocaleDateString("en-GB");
-        const durationDetail1 = movieDetailResponse.data[0].duration.replace(
-          "h",
-          " hours"
-        );
+        const data = movieDetailResponse.data[0];
+
+        // Fecha de estreno
+        const formattedRelDate = new Date(data.release_date).toLocaleDateString("en-GB");
+
+        // Duración formateada
+        const durationDetail1 = data.duration.replace("h", " hours");
         const duration = durationDetail1.replace("m", " minutes");
+
+        // Validar rating
+        const parsedRating = Number(data.rating);
+        const rating = !isNaN(parsedRating) ? parsedRating.toFixed(1) : "N/A";
+
+        // Datos finales
         const formattedMovieData = {
-          ...movieDetailResponse.data[0],
-          name: movieDetailResponse.data[0].name,
+          ...data,
+          name: data.name,
           duration,
           release_date: formattedRelDate,
-          rating: movieDetailResponse.data[0].rating.toFixed(1),
+          rating,
         };
 
         setMovieData(formattedMovieData);

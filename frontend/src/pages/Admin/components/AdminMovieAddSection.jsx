@@ -43,88 +43,112 @@ export const AdminMovieAddSection = () => {
   const movieAdd = async (e) => {
     e.preventDefault();
 
-    if (
-      movieInfo.movieName !== "" &&
-      movieInfo.imagePath !== "" &&
-      movieInfo.language !== "" &&
-      movieInfo.description !== "" &&
-      movieInfo.rating !== "" &&
-      movieInfo.duration !== "" &&
-      movieInfo.cast !== "" &&
-      movieInfo.relDate !== "" &&
-      movieInfo.genres !== "" &&
-      movieInfo.directors !== ""
-    ) {
-      try {
-        // Add the movie
-        setLoading(true);
-        const movieResponse = await axios.post(
-          `${import.meta.env.VITE_API_URL}/adminMovieAdd`,
-          {
-            email: signedPerson.email,
-            password: signedPerson.password,
+    // Validaciones básicas
+    const {
+      movieName, imagePath, language, description, rating,
+      duration, cast, relDate, genres, directors,
+    } = movieInfo;
 
-            name: movieInfo.movieName,
-            image_path: movieInfo.imagePath,
-            language: movieInfo.language,
-            synopsis: movieInfo.description,
-            rating: movieInfo.rating,
-            duration: movieInfo.duration,
-            top_cast: movieInfo.cast,
-            release_date: movieInfo.relDate,
-          }
-        );
+    // Validaciones personalizadas
+    if (!movieName || !imagePath || !language || !description || !cast) {
+      adminErrorToast("Por favor, complete todos los campos de texto.");
+      return;
+    }
 
-        const movieId = movieResponse.data && movieResponse.data[0].last_id;
+    if (!rating || isNaN(rating) || rating < 0 || rating > 10) {
+      adminErrorToast("El rating debe ser un número entre 0 y 10.");
+      return;
+    }
 
-        if (movieId) {
-          // Add genres
-          for (const genre of movieInfo.genres) {
-            await axios.post(`${import.meta.env.VITE_API_URL}/genreInsert`, {
-              email: signedPerson.email,
-              password: signedPerson.password,
-              movieId,
-              genre,
-            });
-          }
+    const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+    if (!relDate.match(dateRegex)) {
+      adminErrorToast("La fecha debe estar en el formato aaaa-mm-dd.");
+      return;
+    }
 
-          // Add directors
-          for (let idx = 0; idx < movieInfo.directors.length; idx++) {
-            const director = movieInfo.directors[idx];
-            await axios.post(`${import.meta.env.VITE_API_URL}/directorInsert`, {
-              email: signedPerson.email,
-              password: signedPerson.password,
+    const durationRegex = /^(\d+h)?\s?(\d+m)?$/;
+    if (!duration.match(durationRegex)) {
+      adminErrorToast("Duración inválida. Ejemplo válido: '1h 30m'");
+      return;
+    }
 
-              movieId,
-              director,
-            });
+    if (!Array.isArray(genres) || genres.length === 0) {
+      adminErrorToast("Debe ingresar al menos un género.");
+      return;
+    }
 
-            // Check if it's the last director
-            if (idx === movieInfo.directors.length - 1) {
-              adminMovieToast();
-            }
-          }
+    if (!Array.isArray(directors) || directors.length === 0) {
+      adminErrorToast("Debe ingresar al menos un director.");
+      return;
+    }
 
-          toggleAdminSection();
+    try {
+      setLoading(true);
+      const movieResponse = await axios.post(
+        `${import.meta.env.VITE_API_URL}/adminMovieAdd`,
+        {
+          email: signedPerson.email,
+          password: signedPerson.password,
+          name: movieName,
+          image_path: imagePath,
+          language,
+          synopsis: description,
+          rating,
+          duration,
+          top_cast: cast,
+          release_date: relDate,
         }
-      } catch (err) {
-        console.error(err);
-        adminErrorToast(err.response.data.message);
-      } finally {
-        setMovieInfo({
-          movieName: "",
-          imagePath: "",
-          language: "",
-          description: "",
-          rating: "",
-          duration: "",
-          cast: "",
-          relDate: "",
-          genres: "",
-          directors: "",
-        });
-        setLoading(false);
+      );
+
+      const movieId = movieResponse.data?.[0]?.last_id;
+
+      if (!movieId) {
+        console.error("last_id no recibido:", movieResponse.data);
+        adminErrorToast("Error al registrar la película.");
+        return;
       }
+
+      for (const genre of genres) {
+        await axios.post(`${import.meta.env.VITE_API_URL}/genreInsert`, {
+          email: signedPerson.email,
+          password: signedPerson.password,
+          movieId,
+          genre,
+        });
+      }
+
+      for (let idx = 0; idx < directors.length; idx++) {
+        const director = directors[idx];
+        await axios.post(`${import.meta.env.VITE_API_URL}/directorInsert`, {
+          email: signedPerson.email,
+          password: signedPerson.password,
+          movieId,
+          director,
+        });
+
+        if (idx === directors.length - 1) {
+          adminMovieToast();
+        }
+      }
+
+      toggleAdminSection();
+    } catch (err) {
+      console.error(err);
+      adminErrorToast(err.response?.data?.message || "Error inesperado.");
+    } finally {
+      setMovieInfo({
+        movieName: "",
+        imagePath: "",
+        language: "",
+        description: "",
+        rating: "",
+        duration: "",
+        cast: "",
+        relDate: "",
+        genres: "",
+        directors: "",
+      });
+      setLoading(false);
     }
   };
 

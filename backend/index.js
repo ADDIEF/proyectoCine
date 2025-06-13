@@ -2,7 +2,7 @@ const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
 require("dotenv").config();
-const port = process.env.PORT || 7000;
+const port = process.env.PORT || 700;
 const app = express();
 
 app.use(
@@ -153,8 +153,7 @@ app.post("/showtimesDates", (req, res) => {
     JOIN shown_in ON showtimes.id = shown_in.showtime_id
     JOIN hall ON shown_in.hall_id = hall.id
     WHERE hall.theatre_id = ?
-    ORDER BY showtime_date ASC
-    LIMIT 4`;
+    ORDER BY showtime_date ASC`;
 
   db.query(sql, [theatreId], (err, data) => {
     if (err) return res.json(err);
