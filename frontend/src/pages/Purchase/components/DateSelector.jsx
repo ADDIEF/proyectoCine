@@ -98,7 +98,7 @@ export const DateSelector = ({ paymentOngoing }) => {
   return (
     <div>
       <form>
-        <div className="form-item-heading">Select Date</div>
+        <div className="form-item-heading">Seleccionar Fecha</div>
         {!loading ? (
           <div className="form-item-options">{dateOptions}</div>
         ) : (
