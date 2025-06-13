@@ -108,6 +108,36 @@ export const PurchaseSection = () => {
 
       setTicketIds(recentPurchaseResponse.data);
 
+      console.log("generando factura")
+      await axios
+      .post(
+        `${import.meta.env.VITE_API_URL}/generateInvoice`,
+        {
+          payment_id: paymentID,
+          customer_email: signedPerson.email,
+          movie_name: currentMovie.movie_name,
+          movie_image: currentMovie.image_path,
+          theatre_name: theatreLocation,
+          hall_name: curHallObj?.hall_name,
+          showtime_date: userDate,
+          movie_start_time: curHallObj?.movie_start_time,
+          seat_names: userSeats.map((s) => s.seat_name).join(", "),
+          ticket_price: userSeatPrice * userSeats.length,
+          purchase_date: currentDate(),
+        },
+        { responseType: "blob" }
+      )
+      .then((res) => {
+        console.log("Invoice generated successfully", res.data);
+        const url = window.URL.createObjectURL(new Blob([res.data]));
+        const link = document.createElement("a");
+        link.href = url;
+        link.setAttribute("download", `factura_${paymentID}.pdf`);
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+      });
+
       // Clear user selection
       dispatch(resetCart());
     } catch (err) {

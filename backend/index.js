@@ -436,6 +436,9 @@ app.post("/customerPurchases", (req, res) => {
   });
 });
 
+const generateInvoiceRoute = require("./invoices/generateInvoice");
+app.use("/generateInvoice", generateInvoiceRoute);
+
 // /////
 // ADMIN
 // /////
