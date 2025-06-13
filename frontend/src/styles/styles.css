@@ -2456,3 +2456,9 @@ header {
   justify-content: center;
   align-items: center;
 }
+.error-text {
+  color: #ff4d4f;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+}
