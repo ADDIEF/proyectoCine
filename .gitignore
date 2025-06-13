@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ignorar el entorno virtual
 venv/
 .env
@@ -16,3 +17,7 @@ alembic/versions/
 # Ignorar archivos generados por el sistema operativo
 .DS_Store  # Para macOS
 Thumbs.db  # Para Windows
+=======
+node_modules
+.env
+>>>>>>> desarrollo
