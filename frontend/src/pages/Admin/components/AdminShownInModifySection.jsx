@@ -281,7 +281,7 @@ export const AdminShownInModifySection = ({ selectedDate }) => {
     <section className="section-admin-movie-modify">
       <div className="section-movie-playlist container">
         <div className="form-heading-container">
-          <h2 className="form-admin-heading playlist">Update Movie Playlist</h2>
+          <h2 className="form-admin-heading playlist">Actualiza una lista de Peliculas </h2>
           <button className="btn-admin-arrow" onClick={toggleDropDown}>
             {!moviePlaylistDropDown ? (
               <svg
@@ -324,7 +324,7 @@ export const AdminShownInModifySection = ({ selectedDate }) => {
 
             {selectedShowDate.length > 0 && (
               <>
-                <h3 className="admin-heading-secondary">Select a Slot</h3>
+                <h3 className="admin-heading-secondary">Selecciona un horario</h3>
                 <div className="form-admin-radio-options">
                   {latestShowtimesHtml}
                 </div>
@@ -333,7 +333,7 @@ export const AdminShownInModifySection = ({ selectedDate }) => {
 
             {selectedShowtime !== "" && (
               <>
-                <h3 className="admin-heading-secondary">Replace</h3>
+                <h3 className="admin-heading-secondary">Reemplazar</h3>
                 <div className="form-admin-radio-options">
                   {replaceOptionsHtml}
                 </div>
@@ -342,7 +342,7 @@ export const AdminShownInModifySection = ({ selectedDate }) => {
 
             {selectedReplace !== "" && (
               <>
-                <h3 className="admin-heading-secondary">With</h3>
+                <h3 className="admin-heading-secondary">Con</h3>
                 <div className="form-admin-radio-options">
                   {newMovieOptionsHtml}
                 </div>
@@ -355,7 +355,7 @@ export const AdminShownInModifySection = ({ selectedDate }) => {
                 disabled={loading}
                 onClick={handleMovieSwap}
               >
-                CONFIRM
+                CONFIRMAR
               </button>
             )}
           </form>

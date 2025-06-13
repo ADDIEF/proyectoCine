@@ -106,23 +106,23 @@ export const SeatSelector = ({ seatsData, setSeatsData, paymentOngoing }) => {
 
   return (
     <div>
-      <div className="form-item-heading">Select Seat</div>
+      <div className="form-item-heading">Selecciona Asientos</div>
       {loading && <HashLoader cssOverride={override} color="#eb3656" />}
       {!loading && (
         <>
           <div className="seat-guide-container">
             <div className="seat-available-demo"></div>
-            <p className="seat-status-details">Available</p>
+            <p className="seat-status-details">Disponible</p>
             <div className="seat-booked-demo"></div>
-            <p className="seat-status-details">Booked</p>
+            <p className="seat-status-details">Comprado</p>
             <div className="seat-selected-demo"></div>
-            <p className="seat-status-details">Selected</p>
+            <p className="seat-status-details">Seleccionado</p>
           </div>
           <div className="theatre-screen">
             <div className="screen-1"></div>
             <div className="screen-2"></div>
           </div>
-          <div className="theatre-screen-heading">Theatre Screen</div>
+          <div className="theatre-screen-heading">Pantalla</div>
           <div className="seat-container">{rows}</div>
         </>
       )}

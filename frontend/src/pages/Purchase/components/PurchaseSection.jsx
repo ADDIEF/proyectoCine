@@ -175,7 +175,7 @@ export const PurchaseSection = () => {
         </div>
 
         <div className="purchase-section-right">
-          <h2 className="ticket-container-heading">Ticket Summary</h2>
+          <h2 className="ticket-container-heading">Resumen de Ticket</h2>
 
           <div className="ticket-container">
             {currentMovie && (
@@ -232,7 +232,7 @@ export const PurchaseSection = () => {
                         strokeWidth="32"
                       />
                     </svg>
-                    <p>Location</p>
+                    <p>Ubicacion</p>
                   </div>
 
                   <p className="ticket-info-val">
@@ -283,7 +283,7 @@ export const PurchaseSection = () => {
                         d="M464 160H48"
                       />
                     </svg>
-                    <p>Show Date</p>
+                    <p>Ver fecha</p>
                   </div>
 
                   <p className="ticket-info-val">
@@ -318,7 +318,7 @@ export const PurchaseSection = () => {
                         d="M128 416h256"
                       />
                     </svg>
-                    <p>Hall number</p>
+                    <p>Numero de Sala</p>
                   </div>
 
                   <p className="ticket-info-val">
@@ -343,7 +343,7 @@ export const PurchaseSection = () => {
                       />
                       <path d="M233.38 278.63l-79-113a8.13 8.13 0 0111.32-11.32l113 79a32.5 32.5 0 01-37.25 53.26 33.21 33.21 0 01-8.07-7.94z" />
                     </svg>
-                    <p>Show Time</p>
+                    <p>Horario de Funcion</p>
                   </div>
 
                   <p className="ticket-info-val">
@@ -360,7 +360,7 @@ export const PurchaseSection = () => {
                     >
                       <path d="M490.18,181.4l-44.13-44.13a20,20,0,0,0-27-1,30.81,30.81,0,0,1-41.68-1.6h0A30.81,30.81,0,0,1,375.77,93a20,20,0,0,0-1-27L330.6,21.82a19.91,19.91,0,0,0-28.13,0L232.12,92.16a39.87,39.87,0,0,0-9.57,15.5,7.71,7.71,0,0,1-4.83,4.83,39.78,39.78,0,0,0-15.5,9.58L21.82,302.47a19.91,19.91,0,0,0,0,28.13L66,374.73a20,20,0,0,0,27,1,30.69,30.69,0,0,1,43.28,43.28,20,20,0,0,0,1,27l44.13,44.13a19.91,19.91,0,0,0,28.13,0l180.4-180.4a39.82,39.82,0,0,0,9.58-15.49,7.69,7.69,0,0,1,4.84-4.84,39.84,39.84,0,0,0,15.49-9.57l70.34-70.35A19.91,19.91,0,0,0,490.18,181.4ZM261.81,151.75a16,16,0,0,1-22.63,0l-11.51-11.51a16,16,0,0,1,22.63-22.62l11.51,11.5A16,16,0,0,1,261.81,151.75Zm44,44a16,16,0,0,1-22.62,0l-11-11a16,16,0,1,1,22.63-22.63l11,11A16,16,0,0,1,305.83,195.78Zm44,44a16,16,0,0,1-22.63,0l-11-11a16,16,0,0,1,22.63-22.62l11,11A16,16,0,0,1,349.86,239.8Zm44.43,44.54a16,16,0,0,1-22.63,0l-11.44-11.5a16,16,0,1,1,22.68-22.57l11.45,11.49A16,16,0,0,1,394.29,284.34Z" />
                     </svg>
-                    <p>Ticket Amount</p>
+                    <p>Cantidad</p>
                   </div>
 
                   <p className="ticket-info-val">
@@ -377,7 +377,7 @@ export const PurchaseSection = () => {
                     >
                       <path d="M490.18,181.4l-44.13-44.13a20,20,0,0,0-27-1,30.81,30.81,0,0,1-41.68-1.6h0A30.81,30.81,0,0,1,375.77,93a20,20,0,0,0-1-27L330.6,21.82a19.91,19.91,0,0,0-28.13,0L232.12,92.16a39.87,39.87,0,0,0-9.57,15.5,7.71,7.71,0,0,1-4.83,4.83,39.78,39.78,0,0,0-15.5,9.58L21.82,302.47a19.91,19.91,0,0,0,0,28.13L66,374.73a20,20,0,0,0,27,1,30.69,30.69,0,0,1,43.28,43.28,20,20,0,0,0,1,27l44.13,44.13a19.91,19.91,0,0,0,28.13,0l180.4-180.4a39.82,39.82,0,0,0,9.58-15.49,7.69,7.69,0,0,1,4.84-4.84,39.84,39.84,0,0,0,15.49-9.57l70.34-70.35A19.91,19.91,0,0,0,490.18,181.4ZM261.81,151.75a16,16,0,0,1-22.63,0l-11.51-11.51a16,16,0,0,1,22.63-22.62l11.51,11.5A16,16,0,0,1,261.81,151.75Zm44,44a16,16,0,0,1-22.62,0l-11-11a16,16,0,1,1,22.63-22.63l11,11A16,16,0,0,1,305.83,195.78Zm44,44a16,16,0,0,1-22.63,0l-11-11a16,16,0,0,1,22.63-22.62l11,11A16,16,0,0,1,349.86,239.8Zm44.43,44.54a16,16,0,0,1-22.63,0l-11.44-11.5a16,16,0,1,1,22.68-22.57l11.45,11.49A16,16,0,0,1,394.29,284.34Z" />
                     </svg>
-                    <p>Seats</p>
+                    <p>Asientos</p>
                   </div>
 
                   <p className="ticket-info-val">
@@ -415,7 +415,7 @@ export const PurchaseSection = () => {
                         d="M48 192h416M128 300h48v20h-48z"
                       />
                     </svg>
-                    <p>Payment Method</p>
+                    <p>Metodo de Pago</p>
                   </div>
 
                   <p className="ticket-info-val">
@@ -453,12 +453,12 @@ export const PurchaseSection = () => {
                         d="M48 192h416M128 300h48v20h-48z"
                       />
                     </svg>
-                    <p>Total Price</p>
+                    <p>Precio Total</p>
                   </div>
 
                   <p className="ticket-info-val">
                     {userSeatPrice && userSeats
-                      ? `BDT ${userSeatPrice * userSeats.length}TK`
+                      ? ` ${userSeatPrice * userSeats.length}Bs`
                       : "--"}
                   </p>
                 </li>

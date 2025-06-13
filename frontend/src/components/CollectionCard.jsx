@@ -133,7 +133,7 @@ export const CollectionCard = ({
             : dispatch(showLoginModal());
         }}
       >
-        Get ticket
+        Obtener Boletos
       </button>
     </div>
   );

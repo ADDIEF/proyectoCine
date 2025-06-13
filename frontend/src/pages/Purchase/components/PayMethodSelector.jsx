@@ -11,9 +11,11 @@ export const PayMethodSelector = ({ paymentOngoing }) => {
       border: val === userPayMethod ? "2px solid transparent" : "",
     };
   };
+
   return (
     <div>
       <form>
+
         <div className="form-item-heading">Seleccion Metodo de Pago</div>
         <div className="form-pay-options">
           
@@ -46,12 +48,13 @@ export const PayMethodSelector = ({ paymentOngoing }) => {
             <input
               disabled={paymentOngoing}
               type="radio"
-              id={3}
+              id={1}
               name="Select Payment"
               value="Credit Card"
               onChange={(e) => dispatch(setPaymentMethod(e.target.value))}
               checked={"Credit Card" === userPayMethod}
             />
+
 
             <label className="form-pay-detail" htmlFor={3}>
               Tarjeta de Credito
@@ -66,13 +69,12 @@ export const PayMethodSelector = ({ paymentOngoing }) => {
             <input
               disabled={paymentOngoing}
               type="radio"
-              id={4}
+              id={2}
               name="Select Payment"
               value="Debit Card"
               onChange={(e) => dispatch(setPaymentMethod(e.target.value))}
               checked={"Debit Card" === userPayMethod}
             />
-
             <label className="form-pay-detail" htmlFor={4}>
               Tarjeta de Debito
             </label>

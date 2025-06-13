@@ -122,7 +122,7 @@ export const PictureQualitySelector = ({
           {`${show.hall_name} (${show.show_type})`}
           <div className="form-showtimes">{options}</div>
         </div>
-        <p className="form-show-price">{`BDT ${show.price_per_seat}TK`}</p>
+        <p className="form-show-price">{` ${show.price_per_seat}Bs`}</p>
       </div>
     );
   });

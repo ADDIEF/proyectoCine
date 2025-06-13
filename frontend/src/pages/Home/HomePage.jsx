@@ -14,7 +14,6 @@ const HomePage = () => {
       <HeroSection />
       <HomeCollection />
       <Features />
-      <SocialLinks />
       <Footer />
     </>
   );

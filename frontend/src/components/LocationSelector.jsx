@@ -65,10 +65,10 @@ export const LocationSelector = ({ paymentOngoing }) => {
       </select>
 
       <p className="selected-location">
-        Location: <span>{userLocation?.location}</span>
+        Ubicacion: <span>{userLocation?.location}</span>
       </p>
       <p className="selected-theatre">
-        Theatre: <span>{userLocation?.name}</span>
+        Cine: <span>{userLocation?.name}</span>
       </p>
     </div>
   ) : (

@@ -4,6 +4,7 @@ import {
   HiCalendar,
   HiOutlineClock,
   HiOutlineCurrencyBangladeshi,
+  HiOutlineCurrencyDollar,
   HiOutlineMapPin,
   HiOutlineTicket,
   HiOutlineTv,
@@ -127,12 +128,12 @@ export const CustomerInfoSection = () => {
 
           <div className="purchase-price-create">
             <div className="purchase-tags">
-              <HiOutlineCurrencyBangladeshi size={18} />
+              <HiOutlineCurrencyDollar size={18} />
               <strong>{cusTicket.ticket_price}</strong>
             </div>
             <div className="purchase-tags">
               <p>
-                Purchased at <strong>{cusTicket.purchase_date}</strong>
+                Comprado en <strong>{cusTicket.purchase_date}</strong>
               </p>
             </div>
           </div>
@@ -155,13 +156,13 @@ export const CustomerInfoSection = () => {
   return (
     <div className="section-customer-info">
       <div className="container">
-        <h3 className="customer-info-heading">Customer Info</h3>
+        <h3 className="customer-info-heading">Informacion del Cliente</h3>
         {loading1 ? (
           <HashLoader cssOverride={override} color="#eb3656" />
         ) : (
           <div className="customer-info-details">
             <div>
-              <p>Name</p>
+              <p>Nombre</p>
               <p>:</p>
               <p>
                 {cusProData &&
@@ -170,27 +171,27 @@ export const CustomerInfoSection = () => {
             </div>
 
             <div>
-              <p>Email Address</p>
+              <p>Direccion de Correo</p>
               <p>:</p>
               <p>{cusProData.email}</p>
             </div>
 
             <div>
-              <p>Phone No.</p>
+              <p>Numero de Telefono</p>
               <p>:</p>
               <p>{cusProData.phone_number}</p>
             </div>
           </div>
         )}
 
-        <h3 className="customer-info-heading">Purchase History</h3>
+        <h3 className="customer-info-heading">Historial de Compras</h3>
         {loading2 ? (
           <HashLoader cssOverride={override} color="#eb3656" />
         ) : (
           <>
             {cusTicketData.length === 0 && (
               <p className="customer-empty-status">
-                You haven&apos;t purchased any ticket yet
+                No has comprado ningun ticket todavia.
               </p>
             )}
             <div className="purchase-history-section">

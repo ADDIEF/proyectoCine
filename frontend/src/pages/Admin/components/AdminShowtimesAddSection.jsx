@@ -127,7 +127,7 @@ export const AdminShowtimesAddSection = ({
   return (
     <section className="section-admin-showtimes container">
       <div className="form-heading-container">
-        <h2 className="form-admin-heading">Add Showtime Date</h2>
+        <h2 className="form-admin-heading">Agrega un horario</h2>
         <button
           className="btn-admin-arrow"
           onClick={toggleAdminShowtimesSection}
