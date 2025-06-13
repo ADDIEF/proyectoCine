@@ -30,7 +30,7 @@ export const MovieWiseTicket = () => {
 
   return (
     <section className="admin-movie-wise-ticket container">
-      <h3 className="form-admin-heading">Tickets Sold per Movie</h3>
+      <h3 className="form-admin-heading">ENTRADAS VENDIDAS POR PELICULA</h3>
 
       {ticketData.length > 0 && (
         <div className="movie-ticket-container">{ticketDataHtml}</div>

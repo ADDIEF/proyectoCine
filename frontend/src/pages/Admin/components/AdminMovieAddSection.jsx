@@ -131,7 +131,7 @@ export const AdminMovieAddSection = () => {
   return (
     <section className="section-admin-movie-add container">
       <div className="form-heading-container">
-        <h2 className="form-admin-heading">Add a Movie</h2>
+        <h2 className="form-admin-heading">Añadir una Pelicula</h2>
         <button className="btn-admin-arrow" onClick={toggleAdminSection}>
           {!adminMovieDropDown ? (
             <svg
@@ -170,7 +170,7 @@ export const AdminMovieAddSection = () => {
       {adminMovieDropDown && (
         <form className="form-movie-add" onSubmit={movieAdd}>
           <div>
-            <p>Movie Name:</p>
+            <p>Nombre de la Pelicula:</p>
             <input
               name="movieName"
               onChange={(e) => handleMovieInfo(e)}
@@ -180,7 +180,7 @@ export const AdminMovieAddSection = () => {
           </div>
 
           <div>
-            <p>Movie Photo Path:</p>
+            <p>Ruta - Foto de Cartelera:</p>
             <input
               name="imagePath"
               onChange={(e) => handleMovieInfo(e)}
@@ -190,7 +190,7 @@ export const AdminMovieAddSection = () => {
           </div>
 
           <div>
-            <p>Language:</p>
+            <p>Lenguaje:</p>
             <input
               name="language"
               onChange={(e) => handleMovieInfo(e)}
@@ -200,7 +200,7 @@ export const AdminMovieAddSection = () => {
           </div>
 
           <div>
-            <p>Synopsis:</p>
+            <p>Sinopsis:</p>
             <input
               name="description"
               onChange={(e) => handleMovieInfo(e)}
@@ -219,7 +219,7 @@ export const AdminMovieAddSection = () => {
           </div>
 
           <div>
-            <p>Duration:</p>
+            <p>Duración:</p>
             <input
               name="duration"
               onChange={(e) => handleMovieInfo(e)}
@@ -229,7 +229,7 @@ export const AdminMovieAddSection = () => {
           </div>
 
           <div>
-            <p>Top Cast:</p>
+            <p>Casting:</p>
             <input
               name="cast"
               onChange={(e) => handleMovieInfo(e)}
@@ -239,7 +239,7 @@ export const AdminMovieAddSection = () => {
           </div>
 
           <div>
-            <p>Release Date:</p>
+            <p>Fecha de Lanzamiento:</p>
             <input
               name="relDate"
               onChange={(e) => handleMovieInfo(e)}

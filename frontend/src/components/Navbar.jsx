@@ -62,53 +62,21 @@ export const Navbar = () => {
 
       {pageName === "home" ? (
         <HashLink className="logo-container" to="#headerTop">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
+          <img 
+            src="/logo.svg"
+            alt="CINE CRISP - Tu cine en La Paz"
             className="main-logo-icon"
-            viewBox="0 0 512 512"
-          >
-            <path
-              d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
-              fill="none"
-              stroke="currentColor"
-              strokeMiterlimit="10"
-              strokeWidth="32"
-            />
-            <path
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="32"
-              d="M360 94.59V296M443.13 212.87L296 360M417.41 360H216M299.13 443.13l-144-144M152 416V216M68.87 299.13l144-144M94.59 152H288M212.87 68.87L360 216"
-            />
-          </svg>
-          <h1 className="logo-text">Asho Dekhi</h1>
+          />
+          <h1 className="logo-text">CINE CRISP</h1>
         </HashLink>
       ) : (
         <Link className="logo-container" to="/">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
+          <img 
+            src="/logo.svg"  // Nota importante: No incluyas "/public" en la ruta
+            alt="CINE CRISP - Tu cine en La Paz"
             className="main-logo-icon"
-            viewBox="0 0 512 512"
-          >
-            <path
-              d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
-              fill="none"
-              stroke="currentColor"
-              strokeMiterlimit="10"
-              strokeWidth="32"
-            />
-            <path
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="32"
-              d="M360 94.59V296M443.13 212.87L296 360M417.41 360H216M299.13 443.13l-144-144M152 416V216M68.87 299.13l144-144M94.59 152H288M212.87 68.87L360 216"
-            />
-          </svg>
-          <h1 className="logo-text">Asho Dekhi</h1>
+          />
+          <h1 className="logo-text">CINE CRISP</h1>
         </Link>
       )}
 
@@ -129,7 +97,7 @@ export const Navbar = () => {
               to="/showtimes"
               style={pageName === "showtimes" ? selectionTab : {}}
             >
-              Showtimes
+              Funciones
             </Link>
           </li>
           <li>
@@ -138,7 +106,7 @@ export const Navbar = () => {
               to="/aboutus"
               style={pageName === "aboutUs" ? selectionTab : {}}
             >
-              About Us
+              Sobre nosotros
             </Link>
           </li>
           {isAuthenticated && signedPerson.person_type === "Admin" && (
@@ -148,7 +116,7 @@ export const Navbar = () => {
                 to="/admin"
                 style={pageName === "admin" ? selectionTab : {}}
               >
-                Admin
+                Panel Administrador
               </Link>
             </li>
           )}
@@ -259,7 +227,7 @@ export const Navbar = () => {
                       dispatch(showSignModal());
                     }}
                   >
-                    Sign up
+                    Registrarse
                   </button>
                 </li>
                 <li>
@@ -270,7 +238,7 @@ export const Navbar = () => {
                       dispatch(showLoginModal());
                     }}
                   >
-                    Sign in
+                    Iniciar Sesión
                   </button>
                 </li>
               </ul>

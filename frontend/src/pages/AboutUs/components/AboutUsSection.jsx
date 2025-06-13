@@ -1,69 +1,49 @@
 export const AboutUsSection = () => {
   return (
-    <section className="section-about-us ">
+    <section className="section-about-us">
       <div className="container">
         <div className="about-us-heading">
-          Unveiling Our Story Behind
+          Descubre la magia de
           <div className="aboutus-logo-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
+            {/* Reemplazado: SVG por tu imagen */}
+            <img 
+              src="/public/logo.svg"  // Ajusta la ruta según tu estructura
+              alt="Logo CINECRISP"
               className="aboutus-logo-icon"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
-                fill="none"
-                stroke="currentColor"
-                strokeMiterlimit="10"
-                strokeWidth="32"
-              />
-              <path
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="32"
-                d="M360 94.59V296M443.13 212.87L296 360M417.41 360H216M299.13 443.13l-144-144M152 416V216M68.87 299.13l144-144M94.59 152H288M212.87 68.87L360 216"
-              />
-            </svg>
-            <h1 className="aboutus-logo-text">Asho Dekhi</h1>
+            />
+            <h1 className="aboutus-logo-text">CINECRISP</h1>
           </div>
         </div>
         <div className="about-us-body">
-          <p>Welcome to ASHO DEKHI,</p>
+          <p>¡Bienvenidos a CINECRISP!</p>
           <p>
-            At ASHO DEKHI, we are passionate about delivering the ultimate
-            cinematic experience to our valued moviegoers. Our mission is to
-            transport you to a world of magic, wonder, and excitement every time
-            you step into one of our theatres.
+            En el corazón de La Paz, CINECRISP es más que un cine: es un refugio
+            donde el séptimo arte se fusiona con la calidez paceña. Nuestras
+            salas, equipadas con tecnología de punta y sonido envolvente, te
+            transportan desde la altura de nuestra ciudad hasta el centro de
+            cada historia.
           </p>
           <p>
-            With state-of-the-art technology, including mesmerizing IMAX screens
-            and immersive Dolby Atmos sound, we bring your favorite movies to
-            life like never before. Our theatre&apos;s premium lounge area
-            offers a luxurious escape, where you can indulge in handcrafted
-            cocktails and gourmet snacks, surrounded by the finest comfort and
-            elegance.
+            Ofrecemos una experiencia única con pantallas cristalinas y butacas
+            de primera, mientras disfrutas de sabores locales como api con
+            buñuelos o snacks gourmet inspirados en la gastronomía boliviana.
+            ¡Hasta el popcorn tiene nuestro toque altiplánico!
           </p>
           <p>
-            As true cinephiles, we understand that every movie moment counts,
-            which is why we strive to provide you with the best amenities,
-            premium seating, and top-notch customer service. Whether you&apos;re
-            here for the latest blockbusters, captivating documentaries, or
-            special events, our diverse selection of films ensures there&apos;s
-            something for every taste.
+            Programamos desde estrenos internacionales hasta cine boliviano de
+            autor, porque creemos en el poder de las historias que nos reflejan.
+            Cada proyección es un viaje, ya sea por los paisajes del Salar en un
+            documental o en aventuras de Hollywood con subtítulos en quechua o
+            aymara para eventos especiales.
           </p>
           <p>
-            We believe that going to the movies should be more than just an
-            outing; it should be an unforgettable experience. That&apos;s why we
-            take pride in curating each detail to create lasting memories for
-            you and your loved ones.
+            Nos enorgullece ser un espacio donde las familias paceñas, jóvenes
+            cinéfilos y visitantes crean recuerdos. ¿Nuestro secreto? Combinar
+            la modernidad del cine global con el alma festiva de Bolivia.
           </p>
           <p>
-            Join us at ASHO DEKHI and immerse yourself in the captivating world
-            of cinema. Get ready to unleash the movie magic and embark on a
-            journey of pure entertainment, delight, and wonder. We can&apos;t
-            wait to share the magic of the silver screen with you.
+            Ven a CINECRISP: donde la pantalla grande brilla a 3,600 metros de
+            altura. ¡La mejor vista del cine está aquí!
           </p>
         </div>
       </div>

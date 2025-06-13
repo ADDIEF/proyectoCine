@@ -22,6 +22,7 @@ export const DateSelector = ({ paymentOngoing }) => {
             theatreId,
           }
         );
+        console.log(response.data); // Verifica que sea un array de objetos con showtime_date
         setShowDatesData(response.data);
         dispatch(resetCart());
       } catch (err) {

@@ -7,10 +7,14 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://asho-dekhi.vercel.app"],
-    methods: ["POST", "GET"],
+    origin: [
+      "http://localhost:5173",  // Permite solicitudes desde localhost
+      "https://asho-dekhi.vercel.app"  // Ya tienes esto, mantiene esta URL para producción
+    ],
+    methods: ["POST", "GET", "PUT", "DELETE"],  // Métodos permitidos
   })
 );
+
 
 app.use(express.json());
 
@@ -140,21 +144,21 @@ app.get("/genres", (req, res) => {
 // /////////////
 // PAYMENT PAGE
 // /////////////
-
 app.post("/showtimesDates", (req, res) => {
   const theatreId = req.body.theatreId;
 
-  const sql = `SELECT subquery.showtime_date
-  FROM (
-      SELECT DISTINCT showtimes.showtime_date
+  const sql = `
+    SELECT subquery.showtime_date
+    FROM (
+      SELECT DISTINCT showtimes.showtime_date, showtimes.id
       FROM showtimes
       JOIN shown_in ON showtimes.id = shown_in.showtime_id
       JOIN hall ON shown_in.hall_id = hall.id
       WHERE hall.theatre_id = ?
       ORDER BY showtimes.id DESC
       LIMIT 4
-  ) AS subquery
-  ORDER BY subquery.showtime_date ASC`;
+    ) AS subquery
+    ORDER BY subquery.showtime_date ASC`;
 
   db.query(sql, [theatreId], (err, data) => {
     if (err) return res.json(err);
@@ -162,6 +166,7 @@ app.post("/showtimesDates", (req, res) => {
     return res.json(data);
   });
 });
+
 
 app.post("/uniqueMovies", (req, res) => {
   const theatreId = req.body.theatreId;
@@ -401,21 +406,20 @@ app.post("/customerProfile", (req, res) => {
 app.post("/customerPurchases", (req, res) => {
   const email = req.body.email;
 
-  const sql = `SELECT
-  P.email AS customer_email,
-  PA.id AS payment_id,
-  GROUP_CONCAT(T.id SEPARATOR ', ') AS ticket_ids,
-  GROUP_CONCAT(ST.name SEPARATOR ', ') AS seat_numbers,
-  TH.name AS theatre_name,
-  H.name AS hall_name,
-  M.name AS movie_name,
-  T.movie_id as movie_id,
-  M.image_path AS movie_image,
-  S.movie_start_time AS movie_start_time,
-  S.show_type AS show_type,
-  S.showtime_date AS showtime_date,
-  PA.amount AS ticket_price,
-  T.purchase_date AS purchase_date
+  const sql = `
+  SELECT P.email AS customer_email,
+         PA.id AS payment_id,
+         GROUP_CONCAT(ST.name SEPARATOR ', ') AS seat_names,  -- Aquí estamos usando el nombre del asiento
+         TH.name AS theatre_name,
+         H.name AS hall_name,
+         M.name AS movie_name,
+         T.movie_id AS movie_id,
+         M.image_path AS movie_image,
+         S.movie_start_time AS movie_start_time,
+         S.show_type AS show_type,
+         S.showtime_date AS showtime_date,
+         PA.amount AS ticket_price,
+         T.purchase_date AS purchase_date
   FROM person P
   JOIN payment PA ON P.email = PA.customer_email
   JOIN ticket T ON PA.id = T.payment_id
@@ -423,10 +427,14 @@ app.post("/customerPurchases", (req, res) => {
   JOIN movie M ON T.movie_id = M.id
   JOIN hall H ON T.hall_id = H.id
   JOIN theatre TH ON H.theatre_id = TH.id
-  JOIN seat ST ON T.seat_id = ST.id
+  JOIN seat ST ON T.seat_id = ST.id  -- Aquí estamos uniendo la tabla seat con seat_id
   WHERE P.email = ?
-  GROUP BY PA.id 
-  ORDER BY payment_id DESC`;
+  GROUP BY PA.id, TH.name, H.name, M.name, M.image_path, S.movie_start_time, S.show_type, S.showtime_date, PA.amount, T.purchase_date, T.movie_id;
+`;
+
+
+
+
 
   db.query(sql, [email], (err, data) => {
     if (err) return res.json(err);

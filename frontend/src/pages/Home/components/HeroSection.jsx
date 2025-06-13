@@ -18,14 +18,13 @@ export const HeroSection = () => {
         <div className="hero-text">
           <h1 className="heading-primary">
             <TextEffect preset="slide">
-              Unlock the Gateway to Enchanting Movie Magic
+              ¡Déjate llevar por el cine, al estilo boliviano!
             </TextEffect>
           </h1>
 
           <p className="hero-description">
-            Immerse yourself in the captivating allure of cinema as you step
-            into our exquisite destination, designed to elevate your
-            movie-watching experience to new heights.
+            Vive la magia del séptimo arte entre paisajes andinos y la calidez de nuestra tierra. 
+            Películas que emocionan, en un lugar que te hace sentir como en casa.
           </p>
           <div className="hero-btn-container">
             <button
@@ -37,10 +36,10 @@ export const HeroSection = () => {
               }}
               className="btn btn-full"
             >
-              Buy a ticket
+              Compra una Entrada!
             </button>
             <HashLink to="#nowShowing" className="btn btn-outline">
-              Learn more &darr;
+              Mira más &darr;
             </HashLink>
           </div>
 
@@ -79,7 +78,7 @@ export const HeroSection = () => {
             </div>
 
             <p className="hero-review-text">
-              <span>100,000+</span> tickets sold last year
+              <span>10,370+</span> Entradas vendidas el último año
             </p>
           </div>
         </div>

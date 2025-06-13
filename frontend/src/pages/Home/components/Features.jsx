@@ -34,9 +34,9 @@ export const Features = () => {
 
   return (
     <section className="section-features container">
-      <h4 className="subheading">What you&apos;ll get?</h4>
+      <h4 className="subheading">Qué te ofrecemos?</h4>
       <h2 className="section-features-heading heading-secondary">
-        Unleash the Movie Magic and Discover Our Spectacular Features
+        Fluye con la magia del cine y ven a descubrir nuestros maravillosos espacios en la ciudad de La Paz!
       </h2>
 
       {loading ? (

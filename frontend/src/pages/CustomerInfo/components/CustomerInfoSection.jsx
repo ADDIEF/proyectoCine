@@ -63,6 +63,9 @@ export const CustomerInfoSection = () => {
             purchase_date: purDate,
           };
         });
+        
+        console.log(formattedData); // Imprime los datos de las compras formateados
+
         setCusTicketData(formattedData);
       } catch (err) {
         console.error(err);

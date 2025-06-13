@@ -63,7 +63,7 @@ export const MobileNav = () => {
                 navigate("/showtimes");
               }}
             >
-              Showtimes
+              Funciones
             </button>
           </li>
           <li className="mobile-nav-list-item">
@@ -74,7 +74,7 @@ export const MobileNav = () => {
                 navigate("/aboutus");
               }}
             >
-              About Us
+              Nosotros
             </button>
           </li>
           {isAuthenticated && signedPerson.person_type === "Admin" && (
@@ -86,7 +86,7 @@ export const MobileNav = () => {
                   navigate("/admin");
                 }}
               >
-                Admin
+                Administrador
               </button>
             </li>
           )}
@@ -99,7 +99,7 @@ export const MobileNav = () => {
                 dispatch(showSignModal());
               }}
             >
-              Sign Up
+              Registrarse
             </button>
           </li>
           <li className="mobile-nav-list-item">
@@ -110,7 +110,7 @@ export const MobileNav = () => {
                 dispatch(showLoginModal());
               }}
             >
-              Sign in
+              Iniciar Sesión
             </button>
           </li>
 
@@ -123,7 +123,7 @@ export const MobileNav = () => {
                   dispatch(toggleMenuState());
                 }}
               >
-                Log out
+                Salir
               </button>
             </li>
           )}

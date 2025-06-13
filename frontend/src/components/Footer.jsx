@@ -44,53 +44,22 @@ export const Footer = () => {
     <section className="section-footer container">
       {pageName === "home" ? (
         <HashLink className="footer-logo-container" to="#headerTop">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
+          <img 
+            src="/logo.svg"  // IMPORTANTE: usa solo "/logo.svg" (no "/public/logo.svg")
+            alt="CINE CRISP - Experiencia cinematográfica en La Paz"
             className="footer-logo-icon"
-            viewBox="0 0 512 512"
-          >
-            <path
-              d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
-              fill="none"
-              stroke="currentColor"
-              strokeMiterlimit="10"
-              strokeWidth="32"
-            />
-            <path
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="32"
-              d="M360 94.59V296M443.13 212.87L296 360M417.41 360H216M299.13 443.13l-144-144M152 416V216M68.87 299.13l144-144M94.59 152H288M212.87 68.87L360 216"
-            />
-          </svg>
-          <h1 className="footer-logo-text">Asho Dekhi</h1>
+          />
+          <h1 className="footer-logo-text">CINE CRISP</h1>
         </HashLink>
       ) : (
         <Link className="footer-logo-container" to="/">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
+          {/* Logo con la ruta que especificaste */}
+          <img 
+            src="/logo.svg"  // IMPORTANTE: usa solo "/logo.svg" (no "/public/logo.svg")
+            alt="CINE CRISP - Experiencia cinematográfica en La Paz"
             className="footer-logo-icon"
-            viewBox="0 0 512 512"
-          >
-            <path
-              d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
-              fill="none"
-              stroke="currentColor"
-              strokeMiterlimit="10"
-              strokeWidth="32"
-            />
-            <path
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="32"
-              d="M360 94.59V296M443.13 212.87L296 360M417.41 360H216M299.13 443.13l-144-144M152 416V216M68.87 299.13l144-144M94.59 152H288M212.87 68.87L360 216"
-            />
-          </svg>
-          <h1 className="footer-logo-text">Asho Dekhi</h1>
+          />
+          <h1 className="footer-logo-text">CINE CRISP</h1>
         </Link>
       )}
 
@@ -101,7 +70,7 @@ export const Footer = () => {
             dispatch(showSignModal());
           }}
         >
-          Create account
+          Crea una Cuenta
         </button>
       </div>
 
@@ -112,25 +81,20 @@ export const Footer = () => {
             dispatch(showLoginModal());
           }}
         >
-          Sign in
+          Inicia Sesión
         </button>
       </div>
 
       <div className="footer-link-container">
         <Link className="footer-link" to="/aboutus">
-          About us
+          Nosotros...
         </Link>
       </div>
 
-      <h3 className="footer-heading">Our Theatres</h3>
+      <h3 className="footer-heading">Nuestras centrales</h3>
 
       <p className="copyright">
-        Copyright &copy; 2023 by NELOY SAHA, Inc. This work is licensed under
-        the terms of the{" "}
-        <a href="https://www.gnu.org/licenses/gpl-3.0.html">
-          GNU General Public License, version 3 or later (GPL-3.0-or-later)
-        </a>
-        .
+        Copyright &copy; 2025 Análisis y Diseño de Sistemas 2 GRUPO 1{" "}
       </p>
 
       <div className="footer-address-container">

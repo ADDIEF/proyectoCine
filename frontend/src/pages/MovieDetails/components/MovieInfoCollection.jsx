@@ -43,7 +43,7 @@ export const MovieInfoCollection = () => {
     <section className="section-movie-info-collection">
       <div className="home-collection-heading-container">
         <h1 className="heading-secondary heading-collection">
-          Find other movies &rarr;
+          Podrian Gustarte &rarr;
         </h1>
       </div>
       {loading ? (

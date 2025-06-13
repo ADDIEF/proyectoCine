@@ -314,24 +314,24 @@ export const MovieInfoSection = () => {
               </div>
 
               <div className="movie-info-genre-container">
-                <p className="movie-info-title">Genre: </p>
+                <p className="movie-info-title">Género: </p>
                 <p>{movieData && movieData.genres}</p>
               </div>
 
               <div className="movie-info-director-container">
-                <p className="movie-info-title">Directed by: </p>
+                <p className="movie-info-title">Dirigido por: </p>
                 <p>{movieData && movieData.directors}</p>
               </div>
 
               <div className="movie-info-cast-container">
-                <p className="movie-info-title">Top Cast: </p>
+                <p className="movie-info-title">Casting: </p>
                 <p>{movieData && movieData.top_cast}</p>
               </div>
             </div>
           </div>
 
           <div className="movie-info-description-container">
-            <h3 className="movie-info-description-heading">Synopsis</h3>
+            <h3 className="movie-info-description-heading">Sinópsis</h3>
             <p className="movie-info-description">
               {movieData && movieData.synopsis}
             </p>
@@ -343,7 +343,7 @@ export const MovieInfoSection = () => {
         <LocationSelector />
       </div>
 
-      <h3 className="movie-info-screen-heading">Showtimes</h3>
+      <h3 className="movie-info-screen-heading">Funciones</h3>
 
       {loading2 ? (
         <HashLoader cssOverride={override} size={60} color="#eb3656" />

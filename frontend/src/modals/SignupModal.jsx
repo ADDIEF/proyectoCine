@@ -82,7 +82,7 @@ export const SignupModal = () => {
       <form onSubmit={(e) => handleDataInsert(e)}>
         <div className="signup-form-heading">
           <h2 className="signup-form-heading-text">
-            Create a ASHO DEKHI Account
+            Crea tu cuenta
           </h2>
           <button
             type="button"
@@ -110,13 +110,13 @@ export const SignupModal = () => {
           <div className="signup-form-category-sp">
             <div className="signup-form-category">
               <label>
-                First Name: <span>*</span>
+                Nombre: <span>*</span>
               </label>
               <input
                 disabled={loading}
                 name="firstName"
                 type="text"
-                placeholder="Enter First Name"
+                placeholder="Ingrese su nombre..."
                 onChange={(e) => handleSignupDetails(e)}
                 value={signupDetails.firstName}
                 required
@@ -125,14 +125,14 @@ export const SignupModal = () => {
 
             <div className="signup-form-category">
               <label>
-                Last Name: <span>*</span>
+                Apellido: <span>*</span>
               </label>
               <input
                 disabled={loading}
                 name="lastName"
                 type="text"
                 value={signupDetails.lastName}
-                placeholder="Enter Last Name"
+                placeholder="Ingrese su apellido..."
                 onChange={(e) => handleSignupDetails(e)}
                 required
               />
@@ -141,14 +141,14 @@ export const SignupModal = () => {
 
           <div className="signup-form-category">
             <label>
-              Phone Number(Must contain 11 digits): <span>*</span>
+              Número Celular: <span>*</span>
             </label>
             <input
               disabled={loading}
               name="phoneNumber"
               type="number"
               value={signupDetails.phoneNumber}
-              placeholder="Enter Phone No."
+              placeholder="Ingrese su número..."
               onChange={(e) => handleSignupDetails(e)}
               required
             />
@@ -163,7 +163,7 @@ export const SignupModal = () => {
               name="email"
               type="email"
               value={signupDetails.email}
-              placeholder="Enter Email"
+              placeholder="Ingrese su correo..."
               onChange={(e) => handleSignupDetails(e)}
               required
             />
@@ -171,7 +171,7 @@ export const SignupModal = () => {
 
           <div className="signup-form-category">
             <label>
-              Password(Must contain at least 8 digits): <span>*</span>
+              Contraseña (debe tener 8 letras min.): <span>*</span>
             </label>
             <div className="input-password">
               <input
@@ -180,7 +180,7 @@ export const SignupModal = () => {
                 value={signupDetails.password}
                 type={passViewState ? "text" : "password"}
                 onChange={(e) => handleSignupDetails(e)}
-                placeholder="Enter Password"
+                placeholder="Ingrese su contraseña..."
                 required
               />
               <button
@@ -227,7 +227,7 @@ export const SignupModal = () => {
           </div>
 
           <button type="submit" className="btn-reg" disabled={loading}>
-            {loading ? <BarLoader color="#e6e6e8" /> : "Sign up"}
+            {loading ? <BarLoader color="#e6e6e8" /> : "Ingrese"}
           </button>
         </div>
       </form>

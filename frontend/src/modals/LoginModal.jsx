@@ -67,7 +67,7 @@ export const LoginModal = () => {
         }}
       >
         <div className="signup-form-heading">
-          <h2 className="signup-form-heading-text">Sign in to ASHO DEKHI</h2>
+          <h2 className="signup-form-heading-text">Iniciar Sesión</h2>
           <button
             type="button"
             className="btn-form-exit"
@@ -93,14 +93,14 @@ export const LoginModal = () => {
         <div className="signup-form-body">
           <div className="signup-form-category">
             <label>
-              Email: <span>*</span>
+              Correo: <span>*</span>
             </label>
             <input
               name="email"
               type="email"
               disabled={loading}
               value={loginDetails.email}
-              placeholder="Enter Email"
+              placeholder="Ingrese su Correo..."
               onChange={(e) => handleLoginDetails(e)}
               required
             />
@@ -108,7 +108,7 @@ export const LoginModal = () => {
 
           <div className="signup-form-category">
             <label>
-              Enter Your Password: <span>*</span>
+              Contraseña: <span>*</span>
             </label>
             <div className="input-password">
               <input
@@ -116,7 +116,7 @@ export const LoginModal = () => {
                 disabled={loading}
                 value={loginDetails.password}
                 type={passViewState ? "text" : "password"}
-                placeholder="Enter Password"
+                placeholder="Ingrese su contraseña..."
                 onChange={(e) => handleLoginDetails(e)}
                 required
               />
@@ -164,7 +164,7 @@ export const LoginModal = () => {
           </div>
 
           <button type="submit" className="btn-reg" disabled={loading}>
-            {loading ? <BarLoader color="#e6e6e8" /> : "Sign in"}
+            {loading ? <BarLoader color="#e6e6e8" /> : "Ingrese"}
           </button>
         </div>
       </form>

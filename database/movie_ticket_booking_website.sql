@@ -40,15 +40,14 @@ CREATE TABLE `features` (
 --
 
 INSERT INTO `features` (`id`, `title`, `description`, `image_path`, `theatre_id`) VALUES
-(1, 'Unparalleled Cinematic Experience', 'Immerse yourself in stunning visuals and crystal-clear sound, as our state-of-the-art IMAX technology transports you directly into the heart of the action. With a screen that stretches beyond your peripheral vision every frame comes alive with unparalleled brilliance.', '/Images/features/imax.webp', 1),
-(2, 'Delight in Dolby Atmos', 'Experience sound like never before with Dolby Atmos, the epitome audio technology that takes you on an immersive sonic journey.With sound objects moving seamlessly around the theatre, you\'ll be transported into the heart of every scene, making you an integral part of the story.', '/Images/features/sound.webp', 1),
-(3, 'Tantalizing Treats', 'At our movie theatre, we take your movie-watching experience beyond the screen by offering a delectable array of food items at our concession stand. From freshly buttered popcorn, crispy nachos with zesty cheese dips, to gourmet hotdogs and a variety of refreshing beverages, our concession stand is a culinary paradise for movie enthusiasts.', '/Images/features/food.webp', 1),
-(4, 'Luxurious Escape', 'Step into a world of opulence and relaxation, designed to cater to your every need before and after the main event. Our Premium Lounge welcomes you with plush leather seating, elegant décor, and a refined ambiance that sets the stage for an unforgettable cinematic journey.', '/Images/features/lounge.webp', 1),
-(6, 'Unparalleled Cinematic Experience', 'Immerse yourself in stunning visuals and crystal-clear sound, as our state-of-the-art IMAX technology transports you directly into the heart of the action. With a screen that stretches beyond your peripheral vision every frame comes alive with unparalleled brilliance.', '/Images/features/imax.webp', 2),
-(7, 'Delight in Dolby Atmos', 'Experience sound like never before with Dolby Atmos, the epitome audio technology that takes you on an immersive sonic journey.With sound objects moving seamlessly around the theatre, you\'ll be transported into the heart of every scene, making you an integral part of the story.', '/Images/features/sound.webp', 2),
-(8, 'Tantalizing Treats', 'At our movie theatre, we take your movie-watching experience beyond the screen by offering a delectable array of food items at our concession stand. From freshly buttered popcorn, crispy nachos with zesty cheese dips, to gourmet hotdogs and a variety of refreshing beverages, our concession stand is a culinary paradise for movie enthusiasts.', '/Images/features/food.webp', 2),
-(9, 'Luxurious Escape', 'Step into a world of opulence and relaxation, designed to cater to your every need before and after the main event. Our Premium Lounge welcomes you with plush leather seating, elegant décor, and a refined ambiance that sets the stage for an unforgettable cinematic journey.', '/Images/features/lounge.webp', 2);
-
+(1, 'Experiencia Cinemática Inigualable', 'Sumérgete en impresionantes visuales y sonido cristalino, mientras nuestra tecnología de IMAX de última generación te transporta directamente al corazón de la acción. Con una pantalla que se extiende más allá de tu visión periférica, cada fotograma cobra vida con un brillo inigualable.', '/Images/features/imax.webp', 1),
+(2, 'Disfruta del Dolby Atmos', 'Experimenta el sonido como nunca antes con Dolby Atmos, la tecnología de audio definitiva que te lleva en un viaje sonoro inmersivo. Con objetos sonoros moviéndose sin interrupciones alrededor del cine, serás transportado al corazón de cada escena, convirtiéndote en una parte integral de la historia.', '/Images/features/sound.webp', 1),
+(3, 'Deliciosas Golosinas', 'En nuestro cine, llevamos tu experiencia cinematográfica más allá de la pantalla, ofreciendo una deliciosa variedad de productos en nuestro puesto de concesionarios. Desde palomitas de maíz recién hechas con mantequilla, nachos crujientes con sabrosas salsas de queso, hasta perritos calientes gourmet y una variedad de bebidas refrescantes, nuestro puesto de concesionarios es un paraíso culinario para los amantes del cine.', '/Images/features/food.webp', 1),
+(4, 'Escape Lujo', 'Entra en un mundo de opulencia y relajación, diseñado para satisfacer todas tus necesidades antes y después del evento principal. Nuestro Salón Premium te recibe con asientos de cuero suave, una decoración elegante y un ambiente refinado que prepara el escenario para un viaje cinematográfico inolvidable.', '/Images/features/lounge.webp', 1),
+(6, 'Experiencia Cinemática Inigualable', 'Sumérgete en impresionantes visuales y sonido cristalino, mientras nuestra tecnología de IMAX de última generación te transporta directamente al corazón de la acción. Con una pantalla que se extiende más allá de tu visión periférica, cada fotograma cobra vida con un brillo inigualable.', '/Images/features/imax.webp', 2),
+(7, 'Disfruta del Dolby Atmos', 'Experimenta el sonido como nunca antes con Dolby Atmos, la tecnología de audio definitiva que te lleva en un viaje sonoro inmersivo. Con objetos sonoros moviéndose sin interrupciones alrededor del cine, serás transportado al corazón de cada escena, convirtiéndote en una parte integral de la historia.', '/Images/features/sound.webp', 2),
+(8, 'Deliciosas Golosinas', 'En nuestro cine, llevamos tu experiencia cinematográfica más allá de la pantalla, ofreciendo una deliciosa variedad de productos en nuestro puesto de concesionarios. Desde palomitas de maíz recién hechas con mantequilla, nachos crujientes con sabrosas salsas de queso, hasta perritos calientes gourmet y una variedad de bebidas refrescantes, nuestro puesto de concesionarios es un paraíso culinario para los amantes del cine.', '/Images/features/food.webp', 2),
+(9, 'Escape Lujo', 'Entra en un mundo de opulencia y relajación, diseñado para satisfacer todas tus necesidades antes y después del evento principal. Nuestro Salón Premium te recibe con asientos de cuero suave, una decoración elegante y un ambiente refinado que prepara el escenario para un viaje cinematográfico inolvidable.', '/Images/features/lounge.webp', 2);
 -- --------------------------------------------------------
 
 --
@@ -62,19 +61,17 @@ CREATE TABLE `hall` (
   `theatre_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
 -- Dumping data for table `hall`
---
-
 INSERT INTO `hall` (`id`, `name`, `total_seats`, `theatre_id`) VALUES
-(1, 'Hall 1', 48, 1),
-(2, 'Hall 2', 48, 1),
-(3, 'Hall 3', 48, 1),
-(4, 'Hall 4', 48, 1),
-(5, 'Hall 1', 48, 2),
-(6, 'Hall 2', 48, 2),
-(7, 'Hall 3', 48, 2),
-(8, 'Hall 4', 48, 2);
+(1, 'Sala 1', 48, 1),
+(2, 'Sala 2', 48, 1),
+(3, 'Sala 3', 48, 1),
+(4, 'Sala 4', 48, 1),
+(5, 'Sala 1', 48, 2),
+(6, 'Sala 2', 48, 2),
+(7, 'Sala 3', 48, 2),
+(8, 'Sala 4', 48, 2);
+
 
 -- --------------------------------------------------------
 
@@ -500,12 +497,12 @@ CREATE TABLE `movie` (
 --
 
 INSERT INTO `movie` (`id`, `name`, `image_path`, `language`, `synopsis`, `rating`, `duration`, `top_cast`, `release_date`) VALUES
-(1, 'Spider-Man: Across the Spider-Verse', '/Images/movies/spiderman.webp', 'English', 'Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence. When the heroes clash on how to handle a new threat, Miles must redefine what it means to be a hero.', 8.8, '2h 16m', 'Oscar Isaac', '2023-06-23'),
-(2, 'Extraction 2', '/Images/movies/extraction2.webp', 'English', 'After barely surviving his grievous wounds from his mission in Dhaka, Bangladesh, Tyler Rake is back, and his team is ready to take on their next mission.', 7.0, '2h 3m', 'Chris Hemsworth', '2023-06-13'),
-(3, 'Murder Mystery 2', '/Images/movies/murderMystery.webp', 'English', 'Full-time detectives Nick and Audrey are struggling to get their private eye agency off the ground. They find themselves at the center of international abduction when their friend Maharaja, is kidnapped at his own lavish wedding.', 5.7, '1h 30m', 'Jennifer Aniston', '2023-03-31'),
-(4, 'Mission: Impossible - Dead Reckoning Part One', '/Images/movies/missionImpossible.webp', 'English', 'Ethan Hunt and the IMF team must track down a terrifying new weapon that threatens all of humanity if it falls into the wrong hands. With control of the future and the fate of the world at stake, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan is forced to consider that nothing can matter more than the mission -- not even the lives of those he cares about most.', 8.0, '2h 43m', 'Tom Cruise', '2023-07-10'),
-(5, 'Oppenheimer', '/Images/movies/oppenheimer.webp', 'English', 'During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project. Oppenheimer and a team of scientists spend years developing and designing the atomic bomb. Their work comes to fruition on July 16, 1945, as they witness the world\'s first nuclear explosion, forever changing the course of history.', 9.4, '3h', 'Cillian Murphy', '2023-07-21'),
-(6, 'Barbie', '/Images/movies/barbie.webp', 'English', 'Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.', 7.6, '1h 54m', 'Margot Robbie', '2023-07-21');
+(1, 'Spider-Man: A Través del Spider-Verso', '/Images/movies/spiderman.webp', 'Español', 'Miles Morales se transporta a través del Multiverso, donde encuentra un equipo de personas Spider encargadas de proteger su existencia. Cuando los héroes chocan sobre cómo manejar una nueva amenaza, Miles debe redefinir lo que significa ser un héroe.', 8.8, '2h 16m', 'Oscar Isaac', '2023-06-23'),
+(2, 'Extracción 2', '/Images/movies/extraction2.webp', 'Español', 'Después de sobrevivir a sus graves heridas en la misión en Dhaka, Bangladesh, Tyler Rake regresa, y su equipo está listo para afrontar su próxima misión.', 7.0, '2h 3m', 'Chris Hemsworth', '2023-06-13'),
+(3, 'Misterio de Asesinato 2', '/Images/movies/murderMystery.webp', 'Español', 'Los detectives de tiempo completo Nick y Audrey están luchando por sacar su agencia de detectives adelante. Se encuentran en el centro de un secuestro internacional cuando su amigo Maharaja es secuestrado en su propia boda lujosa.', 5.7, '1h 30m', 'Jennifer Aniston', '2023-03-31'),
+(4, 'Misión: Imposible - Sentencia Mortal Parte Uno', '/Images/movies/missionImpossible.webp', 'Español', 'Ethan Hunt y el equipo de la IMF deben rastrear una nueva arma aterradora que amenaza a toda la humanidad si cae en manos equivocadas. Con el control del futuro y el destino del mundo en juego, comienza una carrera mortal alrededor del mundo. Confrontado por un enemigo misterioso y todopoderoso, Ethan se ve obligado a considerar que nada importa más que la misión, ni siquiera las vidas de aquellos a los que más quiere.', 8.0, '2h 43m', 'Tom Cruise', '2023-07-10'),
+(5, 'Oppenheimer', '/Images/movies/oppenheimer.webp', 'Español', 'Durante la Segunda Guerra Mundial, el teniente general Leslie Groves Jr. nombra al físico J. Robert Oppenheimer para trabajar en el top-secret Proyecto Manhattan. Oppenheimer y un equipo de científicos pasan años desarrollando y diseñando la bomba atómica. Su trabajo llega a su culminación el 16 de julio de 1945, cuando presencian la primera explosión nuclear del mundo, cambiando para siempre el curso de la historia.', 9.4, '3h', 'Cillian Murphy', '2023-07-21'),
+(6, 'Barbie', '/Images/movies/barbie.webp', 'Español', 'Barbie y Ken están viviendo el mejor momento de sus vidas en el colorido y aparentemente perfecto mundo de Barbie Land. Sin embargo, cuando tienen la oportunidad de ir al mundo real, pronto descubren las alegrías y los peligros de vivir entre los humanos.', 7.6, '1h 54m', 'Margot Robbie', '2023-07-21');
 
 -- --------------------------------------------------------
 
@@ -543,27 +540,25 @@ CREATE TABLE `movie_genre` (
   `genre` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
 -- Dumping data for table `movie_genre`
---
-
 INSERT INTO `movie_genre` (`movie_id`, `genre`) VALUES
-(1, 'Action'),
-(1, 'Adventure'),
-(1, 'Animation'),
-(2, 'Action'),
-(2, 'Thriller'),
-(3, 'Comedy'),
-(3, 'Mystery'),
-(4, 'Action'),
-(4, 'Adventure'),
-(4, 'Thriller'),
-(5, 'Biography'),
+(1, 'Acción'),
+(1, 'Aventura'),
+(1, 'Animación'),
+(2, 'Acción'),
+(2, 'Suspenso'),
+(3, 'Comedia'),
+(3, 'Misterio'),
+(4, 'Acción'),
+(4, 'Aventura'),
+(4, 'Suspenso'),
+(5, 'Biografía'),
 (5, 'Drama'),
-(5, 'History'),
-(6, 'Adventure'),
-(6, 'Comedy'),
-(6, 'Fantasy');
+(5, 'Historia'),
+(6, 'Aventura'),
+(6, 'Comedia'),
+(6, 'Fantasía');
+
 
 -- --------------------------------------------------------
 
@@ -616,17 +611,18 @@ CREATE TABLE `person` (
 --
 
 INSERT INTO `person` (`email`, `first_name`, `last_name`, `password`, `phone_number`, `account_balance`, `person_type`) VALUES
-('addin@gmail.com', 'Test2', 'test', '123', '17579120791', 100000, 'Customer'),
-('adib@yahoo.com', 'Adib', 'Rahman', 'adib123', '01757912079', 100000, 'Customer'),
-('Belal123@gmail.com', 'Belal', 'Hasan', '123', '01757912079', 1000000, 'Customer'),
-('farhan@gmail.com', 'Farhan', 'Abedin', 'farhan123', '01757912079', 100000, 'Customer'),
-('jon@alu.com', 'Test', 'Saha1', 'test1', '123321311', 100000, 'Customer'),
-('jon@potato.com', 'Test', 'Saha', 'test1', '123321311', 100000, 'Customer'),
-('Jon@snow.com', 'Jon', 'Snow', '456', '123123233', 10000, 'Customer'),
-('neloy.saha456@gmail.com', 'Neloy', 'Saha', '1234', '01757912079', 100000, 'Customer'),
-('niaz@nafi.com', 'Niaz', 'Rahman', '123', '01821379981', 100000, 'Customer'),
-('rahim123@gmail.com', 'Rahim', 'Sheikh', '123', '01757912079', 100000, 'Customer'),
-('sazin@gmail.com', 'Sazin', 'Haque', 'sazin1234', '01757912079', 100000, 'Customer');
+('admin@cineapp.com', 'Admin', 'User', 'adminpassword', '01757912079', 1000000, 'Admin'),
+('addin@gmail.com', 'Carlos', 'García', '123', '17579120791', 100000, 'Customer'),
+('adib@yahoo.com', 'Luis', 'Ramírez', 'adib123', '01757912079', 100000, 'Customer'),
+('Belal123@gmail.com', 'Juan', 'Pérez', '123', '01757912079', 1000000, 'Customer'),
+('farhan@gmail.com', 'Ana', 'Martínez', 'farhan123', '01757912079', 100000, 'Customer'),
+('jon@alu.com', 'Pedro', 'Sánchez', 'test1', '123321311', 100000, 'Customer'),
+('jon@potato.com', 'María', 'López', 'test1', '123321311', 100000, 'Customer'),
+('Jon@snow.com', 'Miguel', 'Torres', '456', '123123233', 10000, 'Customer'),
+('neloy.saha456@gmail.com', 'Nelson', 'González', '1234', '01757912079', 100000, 'Customer'),
+('niaz@nafi.com', 'José', 'Hernández', '123', '01821379981', 100000, 'Customer'),
+('rahim123@gmail.com', 'Raúl', 'Díaz', '123', '01757912079', 100000, 'Customer'),
+('sazin@gmail.com', 'Sofía', 'Mora', 'sazin1234', '01757912079', 100000, 'Customer');
 
 -- --------------------------------------------------------
 
@@ -857,8 +853,8 @@ CREATE TABLE `theatre` (
 --
 
 INSERT INTO `theatre` (`id`, `name`, `location`, `location_details`) VALUES
-(1, 'Bashundhara Shopping Mall', 'Panthapath', 'Show Motion Limited Level 8, Bashundhara City 13/3 Ka, Panthapath, Tejgaon, Dhaka-1205'),
-(2, 'Shimanto Shambhar', 'Dhanmondi', 'Shimanto Shamvar Road no 2, Dhanmondi, Dhaka-1205');
+(1, 'Cine Multicine', 'Zona Sur', 'Avenida Ballivian, Centro Comercial Multicine, Nivel 4, Zona Sur, La Paz, Bolivia'),
+(2, 'Cine 16', 'El Alto', 'Avenida Juan Pablo II, Edificio Cine 16, El Alto, La Paz, Bolivia');
 
 -- --------------------------------------------------------
 

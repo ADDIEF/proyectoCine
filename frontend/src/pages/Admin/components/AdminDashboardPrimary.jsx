@@ -51,7 +51,7 @@ export const AdminDashboardPrimary = () => {
 
   return (
     <section className="section-admin-summary container">
-      <h2 className="form-admin-heading dash-heading">Summary</h2>
+      <h2 className="form-admin-heading dash-heading">RESUMEN</h2>
       <div className="admin-dashboard-primary">
         <div className="dashboard-pri-card">
           {loading1 ? (
@@ -62,7 +62,7 @@ export const AdminDashboardPrimary = () => {
             </p>
           )}
           <div className="admin-dashboard-category">
-            <p>Total Tickets Sold</p>
+            <p>Entradas Vendidas</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="admin-icon"
@@ -120,7 +120,7 @@ export const AdminDashboardPrimary = () => {
             </p>
           )}
           <div className="admin-dashboard-category">
-            <p>Total Payment Received</p>
+            <p> GANANCIAS </p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="admin-icon"
@@ -159,7 +159,7 @@ export const AdminDashboardPrimary = () => {
             </p>
           )}
           <div className="admin-dashboard-category">
-            <p>Total Customers</p>
+            <p>USUARIOS TOTALES</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="admin-icon"
