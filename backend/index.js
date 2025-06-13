@@ -2,7 +2,7 @@ const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
 require("dotenv").config();
-const port = process.env.PORT || 700;
+const port = process.env.PORT || 7000;
 const app = express();
 
 app.use(
@@ -398,42 +398,41 @@ app.post("/customerProfile", (req, res) => {
 });
 
 app.post("/customerPurchases", (req, res) => {
-  const email = req.body.email;
+  const { email } = req.body;
 
   const sql = `
-  SELECT P.email AS customer_email,
-         PA.id AS payment_id,
-         GROUP_CONCAT(ST.name SEPARATOR ', ') AS seat_names,  -- Aquí estamos usando el nombre del asiento
-         TH.name AS theatre_name,
-         H.name AS hall_name,
-         M.name AS movie_name,
-         T.movie_id AS movie_id,
-         M.image_path AS movie_image,
-         S.movie_start_time AS movie_start_time,
-         S.show_type AS show_type,
-         S.showtime_date AS showtime_date,
-         PA.amount AS ticket_price,
-         T.purchase_date AS purchase_date
-  FROM person P
-  JOIN payment PA ON P.email = PA.customer_email
-  JOIN ticket T ON PA.id = T.payment_id
-  JOIN showtimes S ON T.showtimes_id = S.id
-  JOIN movie M ON T.movie_id = M.id
-  JOIN hall H ON T.hall_id = H.id
-  JOIN theatre TH ON H.theatre_id = TH.id
-  JOIN seat ST ON T.seat_id = ST.id  -- Aquí estamos uniendo la tabla seat con seat_id
-  WHERE P.email = ?
-  GROUP BY PA.id, TH.name, H.name, M.name, M.image_path, S.movie_start_time, S.show_type, S.showtime_date, PA.amount, T.purchase_date, T.movie_id;
-`;
-
-
-
-
+    SELECT 
+      PA.id AS payment_id,
+      GROUP_CONCAT(DISTINCT T.id) AS ticket_ids,
+      GROUP_CONCAT(DISTINCT ST.name ORDER BY ST.name SEPARATOR ', ') AS seat_names,
+      TH.name AS theatre_name,
+      H.name AS hall_name,
+      M.name AS movie_name,
+      M.id AS movie_id,
+      M.image_path AS movie_image,
+      S.movie_start_time,
+      S.show_type,
+      DATE(S.showtime_date) AS showtime_date,
+      PA.amount AS ticket_price,
+      DATE(T.purchase_date) AS purchase_date
+    FROM ticket T
+    JOIN payment PA ON T.payment_id = PA.id
+    JOIN showtimes S ON T.showtimes_id = S.id
+    JOIN movie M ON T.movie_id = M.id
+    JOIN hall H ON T.hall_id = H.id
+    JOIN theatre TH ON H.theatre_id = TH.id
+    JOIN seat ST ON T.seat_id = ST.id
+    JOIN person P ON PA.customer_email = P.email
+    WHERE P.email = ?
+    GROUP BY PA.id, TH.name, H.name, M.name, M.id, M.image_path, 
+             S.movie_start_time, S.show_type, S.showtime_date, 
+             PA.amount, T.purchase_date
+    ORDER BY T.purchase_date DESC
+  `;
 
   db.query(sql, [email], (err, data) => {
-    if (err) return res.json(err);
-
-    return res.json(data);
+    if (err) return res.status(500).json({ error: err.message });
+    res.json(data);
   });
 });
 
