@@ -148,21 +148,16 @@ app.post("/showtimesDates", (req, res) => {
   const theatreId = req.body.theatreId;
 
   const sql = `
-    SELECT subquery.showtime_date
-    FROM (
-      SELECT DISTINCT showtimes.showtime_date, showtimes.id
-      FROM showtimes
-      JOIN shown_in ON showtimes.id = shown_in.showtime_id
-      JOIN hall ON shown_in.hall_id = hall.id
-      WHERE hall.theatre_id = ?
-      ORDER BY showtimes.id DESC
-      LIMIT 4
-    ) AS subquery
-    ORDER BY subquery.showtime_date ASC`;
+    SELECT DISTINCT DATE(showtimes.showtime_date) as showtime_date
+    FROM showtimes
+    JOIN shown_in ON showtimes.id = shown_in.showtime_id
+    JOIN hall ON shown_in.hall_id = hall.id
+    WHERE hall.theatre_id = ?
+    ORDER BY showtime_date ASC
+    LIMIT 4`;
 
   db.query(sql, [theatreId], (err, data) => {
     if (err) return res.json(err);
-
     return res.json(data);
   });
 });
