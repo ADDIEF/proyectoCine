@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-// src/App.jsx
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './components/Login';
-import UserProfile from './components/UserProfile';
-import Register from './components/Register'; 
-
-const App = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} /> {/* Ruta raíz */}
-        <Route path="/perfil" element={<UserProfile />} />
-        <Route path="/register" element={<Register />} /> {/* Ruta de registro */}
-      </Routes>
-    </Router>
-  );
-};
-
-=======
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useSelector } from "react-redux";
@@ -121,5 +101,4 @@ function App() {
   );
 }
 
->>>>>>> desarrollo
 export default App;
