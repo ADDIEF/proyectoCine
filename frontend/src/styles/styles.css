@@ -30,11 +30,11 @@ letter-spacing
 
 ----COLORS
 
-Primary:#1a1d2c
+Primary:#9A9C3E
 
-- Tints:#e8e8ea,#e6e6e8,#d1d2d5,#babbc0,#767780,#313441,#484a56,#cccdd0
-- Shades:#313441
-- Accents:#EB3656,#ef5e78,#d4314d,#fbd7dd,#f59eae
+- Tints:#e8e8ea,#e6e6e8,#d1d2d5,#babbc0,#767780,#991F32,#484a56,#cccdd0
+- Shades:#991F32
+- Accents:#A14F1F,#ef5e78,#d4314d,#fbd7dd,#B5737D
 - Greys:#555, #333,#6f6f6f,#888,#767676
 
 
@@ -44,6 +44,17 @@ box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
 ----BORDER-RADIUS
 9px,11px
+
+#519CA0 – verde azulado claro
+#297E93 – azul petróleo
+#173234 – verde oscuro
+#3F6159 – verde grisáceo
+#3F6159 – verde pálido
+#9A9C3E – verde oliva
+#C59A2A – mostaza dorado
+#A14F1F – marrón quemado
+#991F32 – rojo vino
+#B5737D – rosa viejo
 */
 
 * {
@@ -62,7 +73,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #cccdd0;
-  background-color: #1a1d2c;
+  background-color: #9A9C3E;
 
   -webkit-font-smoothing: antialiased; /* For Chrome, Safari, and Opera */
   -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
@@ -97,7 +108,7 @@ header {
   top: 0;
   z-index: 3;
   background-color: transparent;
-  background-image: linear-gradient(to bottom, #171a28, transparent 70%);
+  background-image: linear-gradient(to bottom, #3F6159, transparent 70%);
 }
 
 .logo-container {
@@ -118,7 +129,7 @@ header {
 .main-logo-icon {
   height: 2.8rem;
   width: 2.8rem;
-  color: #eb3656;
+  color: #A14F1F;
 }
 
 .nav-signup {
@@ -163,7 +174,7 @@ header {
 
 .nav-item:hover,
 .nav-item:active {
-  background-color: #eb3656;
+  background-color: #A14F1F;
 }
 
 .profile-icon {
@@ -203,7 +214,7 @@ header {
 
 .signup-button:hover,
 .login-button:hover {
-  background-color: #eb3656;
+  background-color: #A14F1F;
   color: #d1d2d5;
 }
 
@@ -240,7 +251,7 @@ header {
 .logout-icon {
   width: 2.6rem;
   height: 2.6rem;
-  color: #eb3656;
+  color: #A14F1F;
 }
 
 .customer-profile-btn {
@@ -282,7 +293,7 @@ header {
 }
 
 .mobile-nav-menu {
-  background-color: #171a28;
+  background-color: #3F6159;
   padding: 2.4rem 0;
   position: fixed;
   height: 100%;
@@ -331,11 +342,11 @@ header {
 }
 
 .mobile-nav-item:hover {
-  color: #eb3656;
+  color: #A14F1F;
 }
 
 .mobile-nav-list-item {
-  border-bottom: 1px solid #313441;
+  border-bottom: 1px solid #991F32;
 }
 
 .mobile-nav-list-item:last-child {
@@ -372,7 +383,7 @@ header {
   font-size: 2rem;
   letter-spacing: 0.5px;
   font-weight: 700;
-  color: #eb3656;
+  color: #A14F1F;
 }
 
 .btn-form-exit {
@@ -386,7 +397,7 @@ header {
   flex-direction: column;
   gap: 1.6rem;
   font-size: 1.4rem;
-  color: #1a1d2c;
+  color: #9A9C3E;
   font-weight: 600;
 }
 
@@ -402,7 +413,7 @@ header {
 }
 
 .signup-form-category span {
-  color: #eb3656;
+  color: #A14F1F;
   font-weight: 700;
 }
 
@@ -422,7 +433,7 @@ header {
 
 .signup-form *:focus,
 .login-form *:focus {
-  outline: 2px solid #f59eae;
+  outline: 2px solid #B5737D;
 }
 
 .signup-form-category input:hover {
@@ -451,13 +462,13 @@ header {
 .form-icon {
   height: 2.4rem;
   width: 2.4rem;
-  color: #eb3656;
+  color: #A14F1F;
 }
 
 .pass-icon {
   height: 2rem;
   width: 2rem;
-  color: #1a1d2c;
+  color: #9A9C3E;
 }
 
 .btn-reg {
@@ -470,7 +481,7 @@ header {
   font-family: inherit;
   font-family: 1.4rem;
   font-weight: 600;
-  background-color: #eb3656;
+  background-color: #A14F1F;
   border-radius: 2.8rem;
   color: #e6e6e6;
   transition: all 0.4s;
@@ -539,13 +550,13 @@ header {
 
 .btn-outline:link,
 .btn-outline:visited {
-  background-color: #1a1d2c;
+  background-color: #9A9C3E;
   color: inherit;
   transition: all 0.3s;
 }
 
 .btn-full {
-  background-color: #eb3656;
+  background-color: #A14F1F;
   color: #e6e6e8;
   transition: all 0.3s;
   border: none;
@@ -584,7 +595,7 @@ header {
   width: 4.8rem;
   border-radius: 50%;
   margin-right: -1.6rem;
-  border: 3px solid #1a1d2c;
+  border: 3px solid #9A9C3E;
 }
 
 .customer-img:last-child {
@@ -597,7 +608,7 @@ header {
 }
 
 .hero-review-text span {
-  color: #eb3656;
+  color: #A14F1F;
   font-weight: 700;
 }
 
@@ -607,7 +618,7 @@ header {
 
 .section-home-collection,
 .section-movie-info-collection {
-  background-color: #313441;
+  background-color: #991F32;
   padding: 5.8rem 4.8rem;
   position: relative;
   min-height: 76.8rem;
@@ -639,7 +650,7 @@ header {
 }
 
 .heading-collection {
-  border-bottom: 4px solid #eb3656;
+  border-bottom: 4px solid #A14F1F;
 }
 
 .details-collection-container {
@@ -692,7 +703,7 @@ header {
 .home-movie-card {
   display: flex;
   flex-direction: column;
-  background-color: #1a1d2c;
+  background-color: #9A9C3E;
   position: relative;
   border-radius: 11px;
   overflow: hidden;
@@ -776,8 +787,8 @@ header {
 .collection-icon {
   height: 1.4rem;
   width: 1.4rem;
-  color: #eb3656;
-  fill: #eb3656;
+  color: #A14F1F;
+  fill: #A14F1F;
 }
 
 .line-2,
@@ -795,7 +806,7 @@ header {
   top: 0;
   left: 50%;
   transform: translate(-50%, -100%);
-  background-color: #eb3656;
+  background-color: #A14F1F;
   padding: 1.6rem 3.2rem;
   border: none;
   color: #e6e6e8;
@@ -846,7 +857,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 1.2px;
   line-height: 1.6;
-  color: #eb3656;
+  color: #A14F1F;
 }
 
 .feature-contents {
@@ -870,11 +881,11 @@ header {
 }
 
 .feature-icon {
-  color: #eb3656;
+  color: #A14F1F;
   height: 6.4rem;
   width: 6.4rem;
 
-  fill: #eb3656;
+  fill: #A14F1F;
 }
 
 .feature-text-details {
@@ -896,8 +907,8 @@ header {
 
 .section-social-links {
   padding: 4.8rem 0rem;
-  border-top: 1px solid #313441;
-  border-bottom: 1px solid #313441;
+  border-top: 1px solid #991F32;
+  border-bottom: 1px solid #991F32;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -906,7 +917,7 @@ header {
 
 .social-link:link,
 .social-link:visited {
-  border: 2px solid #eb3656;
+  border: 2px solid #A14F1F;
   padding: 1rem;
   border-radius: 50%;
   transition: all 0.3s;
@@ -922,7 +933,7 @@ header {
 .social-link-icon {
   height: 2.4rem;
   width: 2.4rem;
-  fill: #eb3656;
+  fill: #A14F1F;
 }
 
 .social-link:hover .social-link-icon {
@@ -959,7 +970,7 @@ header {
 .footer-logo-icon {
   height: 3.8rem;
   width: 3.8rem;
-  color: #eb3656;
+  color: #A14F1F;
 }
 
 .footer-logo-text {
@@ -1044,7 +1055,7 @@ header {
   display: flex;
   flex-direction: column;
   line-height: 1.6;
-  color: #eb3656;
+  color: #A14F1F;
 }
 
 .location-select-container select {
@@ -1057,7 +1068,7 @@ header {
   letter-spacing: 0.75px;
   color: #e6e6e8;
   border: none;
-  background-color: #313441;
+  background-color: #991F32;
   border-radius: 9px;
   margin-bottom: 0.4rem;
 }
@@ -1087,7 +1098,7 @@ header {
 
 .movie-search-box {
   border: none;
-  background-color: #313441;
+  background-color: #991F32;
   padding: 1.2rem;
   font-family: inherit;
   font-size: 1.6rem;
@@ -1107,7 +1118,7 @@ header {
 /* *********************** */
 
 .section-showtimes {
-  background-color: #313441;
+  background-color: #991F32;
 }
 
 .showtimes-collection {
@@ -1131,7 +1142,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1a1d2c;
+  background-color: #9A9C3E;
   padding: 3.2rem 0;
   gap: 1.6rem;
 }
@@ -1164,7 +1175,7 @@ header {
   font-size: 1.4rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
-  background-color: #eb3656;
+  background-color: #A14F1F;
   color: #e6e6e8;
   border-radius: 2.8rem;
   transition: all 0.3s;
@@ -1179,7 +1190,7 @@ header {
 .showtimes-screen-container {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  background-color: #171a28;
+  background-color: #3F6159;
 }
 
 .showtimes-screen {
@@ -1189,7 +1200,7 @@ header {
   padding: 1.6rem 0;
   letter-spacing: 0.75px;
   text-align: center;
-  background-color: #171a28;
+  background-color: #3F6159;
   grid-column: 1/-1;
   color: #e6e6e8;
   box-shadow: 0 1.2rem 1.4rem rgba(16, 17, 26, 0.4);
@@ -1204,11 +1215,11 @@ header {
 }
 
 .showtimes-schedule-container-3d {
-  background-color: #171a28;
+  background-color: #3F6159;
 }
 
 .showtimes-schedule-container-2d {
-  background-color: #171a28;
+  background-color: #3F6159;
 }
 
 .showtimes-date {
@@ -1240,7 +1251,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #eb3656;
+  border: 2px solid #A14F1F;
   width: 11rem;
   height: 4.4rem;
   border-radius: 2.8rem;
@@ -1268,7 +1279,7 @@ header {
 .genre-icon {
   height: 2.4rem;
   width: 2.4rem;
-  color: #eb3656;
+  color: #A14F1F;
 }
 
 .genre-input-container {
@@ -1278,7 +1289,7 @@ header {
   position: relative;
   padding: 1rem 2.4rem;
   border-radius: 2.8rem;
-  border: 2px solid #eb3656;
+  border: 2px solid #A14F1F;
   transition: all 0.3s;
 }
 
@@ -1308,7 +1319,7 @@ header {
 /* ************* */
 
 .section-purchase {
-  border-bottom: 1px solid #313441;
+  border-bottom: 1px solid #991F32;
 }
 
 .purchase-container {
@@ -1333,14 +1344,14 @@ header {
 
 .purchase-heading {
   padding-bottom: 1.8rem;
-  border-bottom: 1px solid #313441;
+  border-bottom: 1px solid #991F32;
 }
 
 .ticket-container-heading {
   font-size: 2.4rem;
   font-weight: 600;
   letter-spacing: 0.75px;
-  color: #eb3656;
+  color: #A14F1F;
   margin-bottom: 3.2rem;
   padding-left: 2.4rem;
 }
@@ -1349,7 +1360,7 @@ header {
   display: flex;
   flex-direction: column;
   height: 64rem;
-  background-color: #151723;
+  background-color: #173234;
   box-shadow: 0 1.1rem 1.6rem rgba(17, 17, 17, 0.21);
   padding: 2.4rem;
   border-radius: 11px;
@@ -1378,7 +1389,7 @@ header {
 }
 
 .ticket-movie-screen {
-  border: 2px solid #eb3656;
+  border: 2px solid #A14F1F;
   padding: 0.4rem;
   font-size: 1.2rem;
   font-weight: 500;
@@ -1420,7 +1431,7 @@ header {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  color: #eb3656;
+  color: #A14F1F;
   font-weight: 500;
 }
 
@@ -1432,8 +1443,8 @@ header {
 .ticket-icon {
   height: 1.6rem;
   width: 1.6rem;
-  color: #eb3656;
-  fill: #eb3656;
+  color: #A14F1F;
+  fill: #A14F1F;
 }
 
 .ticket-btn,
@@ -1458,7 +1469,7 @@ header {
 }
 
 .ticket-btn {
-  background-color: #eb3656;
+  background-color: #A14F1F;
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -1482,7 +1493,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #eb3656;
+  border: 2px solid #A14F1F;
   border-radius: 9px;
   transition: all 0.3s;
 }
@@ -1517,7 +1528,7 @@ header {
   font-weight: 600;
   letter-spacing: 0.5px;
   line-height: 1.6;
-  color: #eb3656;
+  color: #A14F1F;
 }
 
 .form-item-heading {
@@ -1544,7 +1555,7 @@ header {
   width: 10.4rem;
   height: 7.2rem;
   padding: 0.8rem;
-  background-color: #313441;
+  background-color: #991F32;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1643,7 +1654,7 @@ header {
 .movie-selector-icon {
   height: 3rem;
   width: 3rem;
-  color: #eb3656;
+  color: #A14F1F;
 }
 
 .checkmark-icon {
@@ -1660,7 +1671,7 @@ header {
 .form-hall-container {
   display: grid;
   grid-template-columns: 1fr;
-  background-color: #313441;
+  background-color: #991F32;
   border-radius: 11px;
   padding: 1.4rem 3.2rem;
 }
@@ -1704,7 +1715,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #eb3656;
+  border: 2px solid #A14F1F;
   width: 8.6rem;
   height: 2.8rem;
   border-radius: 2.8rem;
@@ -1770,7 +1781,7 @@ header {
 }
 
 .seat {
-  background-color: #313441;
+  background-color: #991F32;
   height: 4.4rem;
   width: 4.4rem;
   font-size: 1.4rem;
@@ -1826,7 +1837,7 @@ header {
 .seat-available-demo,
 .seat-booked-demo,
 .seat-selected-demo {
-  background-color: #313441;
+  background-color: #991F32;
   height: 4.4rem;
   width: 4.4rem;
   border-top-left-radius: 1.2rem;
@@ -1849,7 +1860,7 @@ header {
 .section-about-us {
   margin-top: 9.8rem;
   padding-bottom: 9.8rem;
-  border-bottom: 1px solid #313441;
+  border-bottom: 1px solid #991F32;
 }
 
 .about-us-heading {
@@ -1871,7 +1882,7 @@ header {
 .aboutus-logo-icon {
   height: 4.8rem;
   width: 4.8rem;
-  color: #eb3656;
+  color: #A14F1F;
 }
 
 .aboutus-logo-text {
@@ -1950,8 +1961,8 @@ header {
 .movie-info-icon {
   height: 2.4rem;
   width: 2.4rem;
-  color: #eb3656;
-  fill: #eb3656;
+  color: #ccb1a1;
+  fill: #A14F1F;
 }
 
 .movie-info-genre-container {
@@ -1971,7 +1982,7 @@ header {
 }
 
 .movie-info-title {
-  color: #eb3656;
+  color: #bca89d;
   font-weight: 600;
 }
 
@@ -1988,7 +1999,7 @@ header {
 .movie-info-description-heading,
 .movie-info-screen-heading,
 .customer-info-heading {
-  color: #eb3656;
+  color: #A14F1F;
   font-size: 3.2rem;
   font-weight: 500;
 }
@@ -2013,7 +2024,7 @@ header {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto 1fr;
   justify-items: center;
-  background-color: #151723;
+  background-color: #173234;
   border-radius: 11px;
 }
 
@@ -2024,7 +2035,7 @@ header {
 .section-customer-info {
   margin-top: 9.8rem;
   padding-bottom: 9.8rem;
-  border-bottom: 1px solid #313441;
+  border-bottom: 1px solid #991F32;
 }
 
 .customer-info-heading {
@@ -2074,7 +2085,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 0.2fr;
   gap: 3.2rem;
-  background: linear-gradient(145deg, #20242f, #151822);
+  background: linear-gradient(145deg, #991F32, #151822);
   overflow: hidden;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -2087,7 +2098,7 @@ header {
 .purchase-second-gap {
   height: 5.2rem;
   width: 5.2rem;
-  background-color: #1a1d2c;
+  background-color: #9A9C3E;
   position: absolute;
   z-index: 15;
   border-radius: 50%;
@@ -2129,7 +2140,7 @@ header {
 .purchase-item-header h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #eb3656;
+  color: #d6c6bc;
   line-height: 1.4;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -2158,7 +2169,7 @@ header {
   gap: 0.4rem;
   font-size: 1.6rem;
   font-weight: 600;
-  color: #eb3656;
+  color: #A14F1F;
   letter-spacing: 0.5px;
 }
 
@@ -2247,7 +2258,7 @@ header {
 }
 
 .form-movie-add *:focus {
-  outline: 4px solid #f59eae;
+  outline: 4px solid #B5737D;
 }
 
 .form-movie-add div {
@@ -2268,7 +2279,7 @@ header {
   border: none;
   outline: 1px solid transparent;
   font-weight: 600;
-  color: #1a1d2c;
+  color: #9A9C3E;
   cursor: pointer;
 }
 
@@ -2276,7 +2287,7 @@ header {
   margin-top: 2.4rem;
   border-radius: 2.8rem;
   padding: 1.2rem 3.2rem;
-  background-color: #eb3656;
+  background-color: #A14F1F;
   border: none;
   font-family: inherit;
   color: #e6e6e6;
@@ -2307,7 +2318,7 @@ header {
 .admin-icon {
   height: 2.8rem;
   width: 2.8rem;
-  color: #eb3656;
+  color: #A14F1F;
 }
 
 /* admin showtimeAdd section */
@@ -2329,7 +2340,7 @@ header {
   display: flex;
   padding: 1.2rem 3.6rem;
   border-radius: 9px;
-  border: 2px solid #eb3656;
+  border: 2px solid #A14F1F;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -2359,7 +2370,7 @@ header {
   margin-top: 1.6rem;
   margin-bottom: 1.4rem;
   font-size: 2rem;
-  color: #eb3656;
+  color: #A14F1F;
   font-weight: 600;
   letter-spacing: 0.75px;
 }
@@ -2380,7 +2391,7 @@ header {
 }
 
 .dashboard-pri-card {
-  background-color: #313441;
+  background-color: #991F32;
   height: 15.4rem;
   border-radius: 11px;
   display: flex;
@@ -2398,7 +2409,7 @@ header {
 }
 
 .admin-dashboard-category {
-  color: #eb3656;
+  color: #A14F1F;
 }
 
 .admin-dashboard-val {
@@ -2425,7 +2436,7 @@ header {
   flex-direction: column;
   gap: 2.4rem;
   align-items: center;
-  background-color: #313441;
+  background-color: #991F32;
   letter-spacing: 0.75px;
   border-radius: 11px;
   padding: 3.2rem 2.4rem;
@@ -2446,7 +2457,7 @@ header {
 
 .section-admin-movie-modify {
   padding-bottom: 7.2rem;
-  border-bottom: 1px solid #313441;
+  border-bottom: 1px solid #991F32;
 }
 
 /* loader */

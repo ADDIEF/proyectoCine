@@ -21,6 +21,7 @@ const currentDate = () => {
 };
 
 export const PurchaseSection = () => {
+  const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
   const navigate = useNavigate();
   const [hallData, setHallData] = useState([]);
   const [movieData, setMovieData] = useState([]);
@@ -71,6 +72,7 @@ export const PurchaseSection = () => {
     try {
       setBtnDisabled(true);
       setLoading(true);
+      await delay(10000);
       let paymentID;
 
       // Make the payment request

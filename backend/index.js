@@ -9,7 +9,6 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",  // Permite solicitudes desde localhost
-      "https://asho-dekhi.vercel.app"  // Ya tienes esto, mantiene esta URL para producción
     ],
     methods: ["POST", "GET", "PUT", "DELETE"],  // Métodos permitidos
   })
